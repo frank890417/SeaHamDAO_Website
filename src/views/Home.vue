@@ -4,15 +4,15 @@
     .row
       .col-12
         h1 SeaHam
-          span.stroke DAO 
-        iframe(width="500px" height="300px" src="https://generator.artblocks.io/98000005")
+          span.stroke.d-inline-block DAO 
+        iframe( width="100%" height="300px" src="https://generator.artblocks.io/98000005")
       
         h4
           i Ultracured Hamillionaires, Hamily.
           | <br><br>- ArtBlocks Sea Hams Club - 
         p NFT curated community for
           a( target="_blank") http://artblocks.io/project/98  
-        h2.mt-5 🚧 Under Conustruction 🚧
+        h3.mt-5 🚧 Under Conustruction
         ul.linkList
           li(v-for='item in items')
             a(:href="item.url" target="_blank") 
@@ -20,7 +20,9 @@
               span {{item.title}}
         img.w-100(src="https://pbs.twimg.com/profile_banners/1422981005938466823/1630399981/1080x360")
         a(href="https://twitter.com/Nfdicted/status/1448766485267038208/photo/1" target="_blank")
-        pre.mt-5  2021@ SeaHamDAO &amp; Che-Yu Wu All right reserved
+        .mt-5  
+          span.d-inline-block 2021@ SeaHamDAO &amp; Che-Yu Wu 
+          span.d-inline-block All right reserved
 </template>
 
 <script>
@@ -60,7 +62,7 @@ export default {
   background-size: 40px 40px
   background-image:  linear-gradient(to right, #333 1px, transparent 1px),  linear-gradient(to bottom, #333 1px, transparent 1px)
   h1 
-    font-size: 6rem
+    font-size: 5rem
     font-weight: 900
     cursor: pointer
     .stroke
@@ -75,6 +77,7 @@ export default {
     border: none
     margin-top: 50px
   .linkList
+    padding-left: 0
     list-style: none
     margin: 0
     margin-top: 60px
