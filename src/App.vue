@@ -1,9 +1,9 @@
-<template>
-  <div id="nav">
-    <!-- <router-link to="/">Home</router-link> | -->
-    <!-- <router-link to="/about">About</router-link> -->
-  </div>
-  <router-view/>
+<template lang="pug">
+div
+  Navbar
+  router-view
+  footer.mt-5
+    .text-center Che-Yu Wu &amp; The Hamily @ All right reserved
 </template>
 
 <style lang="scss">
@@ -14,6 +14,7 @@ html,body{
   padding: 0;
   color: white;
   font-size: 18px;
+  background-color: black;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,5 +38,11 @@ html,body{
       color: white;
     }
   }
+}
+
+.strokeText{
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-weight: 900;
 }
 </style>
