@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  nav
+  nav.px-5
     router-link(to="/")
       img.logo(src="hamLogo.svg")
     ul

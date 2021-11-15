@@ -18,7 +18,5 @@ export default {
 }
 </script>
 <style lang="sass">
-iframe
-  border: none
-
+    
 </style>
