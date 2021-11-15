@@ -7,13 +7,14 @@
           .strokeText &amp;HAMILY
     .row.pt-5.pb-5.mt-5.mb-5
       .col-12.col-md-7
-        h2.mt-5 The original Ham
+        h2.mt-5 THE ORIGINAL HAM
         p sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu
         a.btn.btn-primary(href="https://opensea.io/assets/art-blocks-factory?search[query]=Sail-o-bot&search[sortAscending]=true&search[sortBy]=PRICE",
                           target="_blank") View Collection
 
       .col-12.col-md-5
-        iframe( width="100%" height="300px" src="https://generator.artblocks.io/98000005")
+        img.w-100(src="/original_ham.png")
+        //- iframe( width="100%" height="300px" src="https://generator.artblocks.io/98000005")
       img.bg-deco.deco-1(src="/hamiverse_deco_1.svg")
     .row.pt-5.pb-5.mt-5.mb-5
       .col-12.col-md-7.order-2

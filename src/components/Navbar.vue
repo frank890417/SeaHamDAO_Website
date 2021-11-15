@@ -16,19 +16,22 @@ export default {
         {
           url: "/about",
           label: "About"
-        },{
-          url: "/news",
-          label: "News"
-        },{
+        },
+        // {
+        //   url: "/news",
+        //   label: "News"
+        // },
+        {
           url: "/memes",
           label: "Memes"
         },{
           url: "/hamiverse",
           label: "Hamiverse"
-        },{
-          url: "/contact",
-          label: "Contact"
-        }
+        },
+        // {
+        //   url: "/contact",
+        //   label: "Contact"
+        // }
       ]
       
     }
@@ -60,5 +63,8 @@ nav
         &.router-link-exact-active
           color: transparent
           -webkit-text-stroke: 1px white
+        &:hover
+          color: white
+          
       
 </style>

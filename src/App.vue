@@ -1,14 +1,25 @@
 <template lang="pug">
 div.text-left
-  Navbar
-  router-view
-  footer.mt-5
-    .text-center Che-Yu Wu &amp; The Hamily @ All right reserved
+  Navbar 
+  transition(name="page")
+    router-view.pageframe(:key="$router.path")
+  Footer
 </template>
+
+<script>
+import Footer from "@/components/Footer"
+export default {
+  components: {
+    Footer
+  }
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "~bootstrap/scss/bootstrap";
+
+
 html,body{
   overflow-x: hidden;
   margin: 0;
@@ -16,6 +27,9 @@ html,body{
   color: white;
   font-size: 18px;
   background-color: black;
+}
+.pageframe{
+  min-height: 100vh;
 }
 .container{
   max-width: 1400px;
@@ -31,6 +45,7 @@ html,body{
   color: white;
 
 }
+
 
 iframe{
   border: none
@@ -52,6 +67,11 @@ iframe{
 
 }
     
+a{
+
+  color: white
+}
+
 #nav {
   padding: 30px;
 
@@ -81,6 +101,15 @@ h2{
 }
 h3{
   font-size: 3rem;
+}
+
+
+.page.page-enter-active, .page.page-leave-active {
+  transition: .5s !important;
+  opacity: 1;
+}
+.page.page-enter, .page.page-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0 !important;
 }
 
 </style>

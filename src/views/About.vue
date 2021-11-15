@@ -3,19 +3,20 @@
   .container
     .row
       .col-md-7
-        h1 About
+        h1.animated.fadeInUp About
           br
           .strokeText WHY HAMS
         p Sail-o-bots try to combine but also spare concepts, perceptions and even basic human need based on Maslow's hierarchy. They are the mischief of the sea, have their own tiny boats to sail but they prefer to stand still, and watch the sunset. Until the next day comes, Sail-o-bots wait, they do not eat, they do not sleep, that's why they are on edge from time to time. Do not judge them quickly. Each bot has its own messages if you want to take or they are just shiny stuff you can stare at. Sail-o-bots cannot stay at a same style, that is who they are, they might be called inconsistent, but it has advantages, having multiple disciplines is really important for them, they will never stop trying to discover more. They will always be going back and forward around several versions, do not think that they will stop at one since they discover themselves, which is probably never.<br>
           br
           | sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu (https://twitter.com/Majer666666) Source code derived from https://openprocessing.org/sketch/1150492 under CC-BY-SA 3.0 license. Modifications include: custom botGlasses variable added with 3 different cases; custom botLips variable added with 3 different cases; 10 sets of custom colors added; antennas, ear and nose size and geometric shape types updated.
-      .col-md-5
-        iframe( width="100%" height="300px" src="https://generator.artblocks.io/98000005")
+      .col-md-5.pt-5
+        iframe( width="100%" height="400px" src="https://generator.artblocks.io/98000005")
         img.bg-strokeham(src="/about_strokeham.svg")
     .row
       .col-12.text-left
-        h2 BONE’s
-        h1.why-hams WHY HAMS
+        a.link-why(href="https://blog.floors.cafe/why-hams/" target="_blank") 
+          h2 BONE’s
+          h1.why-hams WHY HAMS
       .col-12
         h2 The Manifesto 
         h4 (Mission Statement, Concept, Points System)
@@ -47,5 +48,6 @@
     position: absolute
     bottom: -20vh
     left: 0
-      
+  .link-why
+    color: white
 </style>

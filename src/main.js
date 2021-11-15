@@ -4,10 +4,10 @@ import router from "./router";
 import store from "./store";
 
 import Navbar from "./components/Navbar";
+import "animate.css/animate.min.css";
 
-
-
-import fontawesome from "@fortawesome/fontawesome-free";
+// import fontawesome from "@fortawesome/fontawesome-free";
+import '@fortawesome/fontawesome-free/js/all.js';
 // import "bootstrap";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
