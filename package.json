@@ -8,12 +8,15 @@
     "deploy": "firebase deploy"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^0.5.3",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "analytics": "^0.7.18",
     "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
     "firebase": "^9.1.3",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
+    "universal-analytics": "^0.4.23",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

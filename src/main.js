@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import "animate.css/animate.min.css";
 
 // import fontawesome from "@fortawesome/fontawesome-free";
-import '@fortawesome/fontawesome-free/js/all.js';
+import "@fortawesome/fontawesome-free/js/all.js";
 // import "bootstrap";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -33,7 +33,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-
-let vueApp = createApp(App)
-vueApp.component('Navbar',Navbar)
+let vueApp = createApp(App);
+vueApp.component("Navbar", Navbar);
 vueApp.use(store).use(router).mount("#app");
