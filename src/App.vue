@@ -27,13 +27,17 @@ html,body{
   color: white;
   font-size: 18px;
   background-color: black;
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: 768px) {
     font-size: 15px;
   }
 }
+
 .pageframe{
   min-height: 100vh;
-  padding-top: 30px;
+  padding-top: 0px;
+  @media only screen and (max-width: 768px) {
+  padding-top: 100px;
+  }
 }
 .container{
   max-width: 1400px;
@@ -99,12 +103,22 @@ h1,h2,h3,h4,h5,h6{
 }
 h1{
   font-size: 7rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 5rem;
+  }
 }
 h2{
   font-size: 5rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
 }
 h3{
   font-size: 3rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 

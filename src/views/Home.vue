@@ -1,6 +1,6 @@
 <template lang="pug">
-.page
-  .container-fluid
+.page.home.pt-5
+  .container
     .row
       .col-12.col-lg-6.order-sm-1
         iframe#superham.w-100(width="100%" height="800px" src="/sketch1338290/index.html")
@@ -19,5 +19,7 @@ export default {
 }
 </script>
 <style lang="sass">
-    
+.page.home
+  .container
+    max-width: 1440px
 </style>
