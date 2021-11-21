@@ -8,6 +8,8 @@ footer.mt-5
   .text-center.mt-3 
     a(href="https://twitter.com/cheyuwu345" target="_blank") Che-Yu Wu
     span &nbsp;&amp; The Hamily @ All right reserved
+    br
+    span Contact: hello@hamily.life
 </template>
 <style lang="sass" scoped>
 .link-social

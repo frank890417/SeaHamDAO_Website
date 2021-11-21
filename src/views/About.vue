@@ -23,9 +23,15 @@
 
     .row.mt-5
       .col-12
-        //- img.w-100(src="/hamiverse_deco_2.svg")
-        //- h2 The Manifesto
+        img.w-100(src="/hamiverse_deco_2.svg")
+        h2 The Manifesto
         //- h3 (Mission Statement, Concept, Points System)
+        p The Hamily is a group of artists, collectors and general enthusiasts of the prosciutto coming together to act as stewards of the ham. We seek to grow the community in size and strength, facilitate the production of derivative works, and amass a treasury that can be deployed across a variety of initiatives to build awareness for the Sea Ham.
+        p Sensei Che-Yu has invited The Hamily to Foundation and supplied three timeless Hams to auction to seed the treasury, which will be governed by holders of Sea Hams, Craft Hams, Pochis, Hambodies, and future collaborative projects. 
+        p The Hamily will initially employ a benevolent dictator style structure, with VVD acting as the Hambassador until governance processes are formalized over the coming months and decentralized voting is implemented. 
+        p The role of the Hambassador is that of a community approved arbiter who seeks to steer the The Hamily towards their stated goals and act as a public representative for the collective. The roll of the Hambassador will be up for election numerous times per year
+
+
         //- br
         //- h4 The SeaHamDAO Manifesto
         //- p Introducing the SeaHamDAO - a community of artists, art collectors and art enthusiasts bringing together the best people in the NFT world.
@@ -47,6 +53,13 @@
     //-     p The main mission is to grow the Treasury by acquire more ETH, more SEAHAMs and more rare NFTs, to finance che yu wu as an artist and allocate budget for new collabs or developers to build out infrastructure. Simultaneously the goal is to grow the community & governance participation, through collabs with other artists, marketing campaigns and partnerships with other DAOS and collectors.
   .container-fluid
     img.w-100(src="/hamiverse_deco_4.svg")
+  .container
+    .row.mt-5
+      .col-12
+        h3 HELP!
+        p We need contributors! Community managers, artists, developers, team leaders, and much much more! Reach out to us in discord once we have set up the new job/onboarding channels! 
+        br
+        p Contact: hello@hamily.life
   //- .container
     //- .row.mt-5
     //-   h3 The DAO has 4 overarching missions:
@@ -73,11 +86,6 @@
       .col-12
         h3 THOUGHTS?
         p New channels on discord where everyone can participate, streamlining the DAOs governance processes (proposals, appeals, gov, etc) and also setting up a notion, discourse and snapshot space which will become the heart of the gov operations.
-
-    .row.mt-5
-      .col-12
-        h3 HELP!
-        p We need contributors! Community managers, artists, developers, team leaders, and much much more! Reach out to us in discord once we have set up the new job/onboarding channels! 
 
 
 </template>

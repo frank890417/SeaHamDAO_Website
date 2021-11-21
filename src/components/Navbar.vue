@@ -7,8 +7,10 @@ div.nav-container
       li
         a.link-social(href="https://twitter.com/sailobots" target="_blank").mr-4
           i.fab.fa-twitter
-        a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank")
+        a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank").mr-4
           i.fab.fa-discord
+        a.link-social(href="mailto:hello@hamily.life" target="_blank")
+          i.fas.fa-envelope
     img.bg-strokeham(src="/about_strokeham.svg")
   router-link(to="/")
     img.logo(src="hamLogo.svg")
