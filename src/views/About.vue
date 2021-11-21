@@ -17,23 +17,13 @@
         a.link-why(href="https://blog.floors.cafe/why-hams/" target="_blank") 
           h2 BONE’s
           h1.why-hams WHY HAMS
-      .col-12
-        h2 The Manifesto 
-        h4 (Mission Statement, Concept, Points System)
-        p The SeaHamDAO Manifesto
-          | Introducing the SeaHamDAO - a community of artists, art collectors and art enthusiasts bringing together the best people in the NFT world.
-          br
-          | SeaHamDAO will amass a collection of assets that are highly scarce, then create content that reinforces their social significance and strengthens desires for these assets. Drawing inspiration from NounsDAO, all holders of assets have voting power.The treasury is controlled exclusively via governance by holders.
-          | WHY? A place for Ham holders to exchange knowledge and discuss collections and individual pieces from the NFT art world. Lets unite, align and grow together. 
-          | Also why: We need to unite the pochis and all hams under one token for a true DAO (*as many of you know the hams are unable to access the private discord channels as of yet).
-          br
-          | HOW? Sensei Che has invited the Hamily to Foundation and given the community three timeless Hams to auction off to kick start the DAO. The proceeds will seed the treasury, which will be governed by all members of the community going forward. Community votes will be tiered with a point system where Craft Holders will have 10votes/craft, Hams 5 votes, pochi 2 and Nobodies also 2. TBC
-          | A sliced Ham from ACK will give the community a token which will unify all holders under one access token for discord: $hamily?
-          br
-          | MISSION? The main mission is to grow the Treasury by acquire more ETH, more SEAHAMs and more rare NFTs, to finance che yu wu as an artist and allocate budget for new collabs or developers to build out infrastructure. Simultaneously the goal is to grow the community & governance participation, through collabs with other artists, marketing campaigns and partnerships with other DAOS and collectors.
+
 
     .row.mt-5
-      .col-sm-6
+      .col-sm-5
+        img.w-100.img-artist(src="https://i.imgur.com/fYCLCmn.jpg")
+
+      .col-sm-7
         h1.animated.fadeInUp Artist
           br
           .strokeText Che-Yu Wu 
@@ -45,8 +35,64 @@
           li Generative Art NFT License on Opensea, 21 items 
           li Electriz - Upcoming Artblocks Project
 
-      .col-sm-6
-        img.w-100.img-artist(src="https://i.imgur.com/fYCLCmn.jpg")
+    .row.mt-5
+      .col-12
+        img.w-100(src="/hamiverse_deco_2.svg")
+        h2 The Manifesto
+        h3 (Mission Statement, Concept, Points System)
+        br
+        h4 The SeaHamDAO Manifesto
+        p Introducing the SeaHamDAO - a community of artists, art collectors and art enthusiasts bringing together the best people in the NFT world.
+        p SeaHamDAO will amass a collection of assets that are highly scarce, then create content that reinforces their social significance and strengthens desires for these assets. Drawing inspiration from NounsDAO, all holders of assets have voting power.The treasury is controlled exclusively via governance by holders.
+    
+
+    .row.mt-5
+      .col-md-4
+        h3 WHY?
+        p A place for Ham holders to exchange knowledge and discuss collections and individual pieces from the NFT art world. Lets unite, align and grow together. 
+          br
+          | Also why: We need to unite the pochis and all hams under one token for a true DAO (*as many of you know the hams are unable to access the private discord channels as of yet).
+
+      .col-md-4
+        h3 HOW?
+        p  Sensei Che has invited the Hamily to Foundation and given the community three timeless Hams to auction off to kick start the DAO. The proceeds will seed the treasury, which will be governed by all members of the community going forward. Community votes will be tiered with a point system where Craft Holders will have 10votes/craft, Hams 5 votes, pochi 2 and Nobodies also 2. TBC
+      .col-md-4
+        h3 MISSION?
+        p The main mission is to grow the Treasury by acquire more ETH, more SEAHAMs and more rare NFTs, to finance che yu wu as an artist and allocate budget for new collabs or developers to build out infrastructure. Simultaneously the goal is to grow the community & governance participation, through collabs with other artists, marketing campaigns and partnerships with other DAOS and collectors.
+  .container-fluid
+    img.w-100(src="/hamiverse_deco_4.svg")
+  .container
+    .row.mt-5
+      
+      h3 The DAO has 4 overarching missions:
+      ol
+        li Become an artist incubator for artists to collab with sensei che, and onboard new artists to web3, helping them establish a footing in the scene. First by airdopping their works to the ham dao members (key collectors in the ecosystem), while also opening minting up to the public.
+        li Acquire more Hams and Pochis for the DAO Treasury (buying floor hams and pochis for the daos collection vault). Eventually, many Craft Ham and Pochi should be held by the DAO and governed by the DAO members.
+        li Collect rare NFTs from the most important NFT artists and collections to vault. 
+        li Become an NFT art ecosystem fund (incentivise long holding).
+    .row.mt-5
+      .col-md-6
+        h3 GROW?
+        h4 How else to enter the DAO?
+        ol
+          li Buy access to the DAO with memes? Proceeds from NFT sales will go to the DAO treasury. 
+          li Active participation, rewarded memes?
+          li New collections, collabs.
+      .col-md-6
+        h3 NEXT
+        h4 is the long term vision for a ‘metaverse native community’
+        p Emergence into the real world! With swag, live events and meetings, sponsorships, and royalty deals (adult swim style cartoon) for Netflix. Some vague ideas here which should be democratically developed through the dao.
+        p The goal of the dao is to coordinate to grow the treasury through acquisitions, which will then allow for growth and an emergence into the real world. A crowdsourced fund to help emerging artists and an incubator for ‘art on chain’.
+
+    .row.mt-5
+      .col-12
+        h3 THOUGHTS?
+        p New channels on discord where everyone can participate, streamlining the DAOs governance processes (proposals, appeals, gov, etc) and also setting up a notion, discourse and snapshot space which will become the heart of the gov operations.
+
+    .row.mt-5
+      .col-12
+        h3 HELP!
+        p We need contributors! Community managers, artists, developers, team leaders, and much much more! Reach out to us in discord once we have set up the new job/onboarding channels! 
 
 
 </template>

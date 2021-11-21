@@ -35,8 +35,9 @@ html,body{
 .pageframe{
   min-height: 100vh;
   padding-top: 0px;
+  
   @media only screen and (max-width: 768px) {
-  padding-top: 100px;
+    margin-top: 100px;
   }
 }
 .container{

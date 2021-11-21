@@ -90,6 +90,8 @@ nav
           -webkit-text-stroke: 1px white
           
       
+  .bg-strokeham
+    display: none
   @media only screen and (max-width: 768px)
     
     position: fixed
@@ -135,7 +137,9 @@ nav
           text-align: left
 
 .logo
-  float: left
+  position: absolute
+  top: 20px
+  left: 20px
   width: 100px
   margin: 10px
 
