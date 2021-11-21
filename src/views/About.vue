@@ -81,6 +81,21 @@
 
 
 </template>
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: 'My Example App',
+      titleTemplate: 'Hello',
+      htmlAttrs: {
+        lang: 'en',
+        amp: true
+      }
+
+    }
+  },
+}
+</script>
 
 
 <style lang="sass">
