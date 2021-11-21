@@ -46,7 +46,7 @@
           li Electriz - Upcoming Artblocks Project
 
       .col-sm-6
-        img.w-100(src="https://i.imgur.com/fYCLCmn.jpg")
+        img.w-100.img-artist(src="https://i.imgur.com/fYCLCmn.jpg")
 
 
 </template>
@@ -59,6 +59,7 @@
     white-space: nowrap
     margin-left: -5vw
     font-weight: 900s
+   
   .bg-strokeham
     width: 110%
     position: absolute
@@ -66,4 +67,6 @@
     left: 0
   .link-why
     color: white
+  .img-artist
+    // filter: saturate(0%) 
 </style>

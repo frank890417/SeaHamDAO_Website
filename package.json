@@ -19,6 +19,7 @@
     "universal-analytics": "^0.4.23",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-svg-inline-loader": "^2.1.2",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

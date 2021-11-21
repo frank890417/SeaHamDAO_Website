@@ -2,7 +2,7 @@
 footer.mt-5
   .text-center
     a.link-social(href="https://twitter.com/sailobots" target="_blank")
-      i.fab.fa-twitter
+      i.fab.fa-twitter.
     a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank")
       i.fab.fa-discord
   .text-center.mt-3 
@@ -14,6 +14,10 @@ footer.mt-5
   
   padding: 5px
   opacity: 0.8
+
+  @media only screen and (max-width: 768px)
+    font-size: 30px
+    
   &:hover
     opacity: 1
 

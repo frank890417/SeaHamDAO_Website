@@ -27,9 +27,13 @@ html,body{
   color: white;
   font-size: 18px;
   background-color: black;
+  @media only screen and (max-width: 660px) {
+    font-size: 15px;
+  }
 }
 .pageframe{
   min-height: 100vh;
+  padding-top: 30px;
 }
 .container{
   max-width: 1400px;
