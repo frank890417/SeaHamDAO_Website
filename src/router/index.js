@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import { TweenMax } from "gsap";
 
 const routes = [
   {
@@ -57,6 +58,28 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.afterEach((to, from) => {
+  let selector = `h1 span, h1 div,h2 span, h2 div`;
+  console.log(to);
+  setTimeout(() => {
+    Array.from(document.querySelectorAll(selector)).forEach((el) => {
+      console.log(el);
+      el.innerHTML = el.innerText
+        .split("")
+        .map((char) => `<span class='split_char'>${char}</span>`)
+        .join("");
+    });
+    TweenMax.from(".split_char", 0.4, {
+      delay: "random(0,1)",
+      css: {
+        opacity: 0,
+        filter: "blur(30px)",
+        transform: `scale(2)`,
+      },
+    });
+  }, 100);
 });
 
 export default router;

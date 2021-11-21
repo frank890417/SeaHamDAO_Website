@@ -3,7 +3,8 @@
   .container
     .row 
       .col-12
-        h1.animated.fadeInUp MEMES
+        h1.animated.fadeInUp 
+          span MEMES
           //- br
           //- .strokeText BEST HAM & POCHI<br>MEMES
   .container-fluid

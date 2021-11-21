@@ -3,7 +3,8 @@
   .container 
     .row
       .col-12
-        h1.animated.fadeInUp Artist
+        h1.animated.fadeInUp 
+          span Artist
           br
           .strokeText Che-Yu Wu 
     .row

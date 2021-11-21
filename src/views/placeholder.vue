@@ -3,7 +3,8 @@
   .container
     .row
       .col-12
-        h1 SeaHam
+        h1 
+          span SeaHam
           span.stroke.d-inline-block DAO 
         iframe( width="100%" height="300px" src="https://generator.artblocks.io/98000005")
       
