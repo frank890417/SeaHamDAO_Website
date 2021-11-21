@@ -8,7 +8,7 @@
           .strokeText HAMILY UPDATE
     .row 
       .col-sm-5
-        img.w-100(src="/original_ham.png")
+        img.w-100(src="https://openprocessing-usercontent.s3.amazonaws.com/thumbnails/visualThumbnail1338290@2x.jpg?hash=20211121093650")
       .col-sm-7
         .news-info
           h3.date.news-date 2021/11/21

@@ -19,21 +19,6 @@
           h1.why-hams WHY HAMS
 
 
-    .row.mt-5
-      .col-sm-5
-        img.w-100.img-artist(src="https://i.imgur.com/fYCLCmn.jpg")
-
-      .col-sm-7
-        h1.animated.fadeInUp Artist
-          br
-          .strokeText Che-Yu Wu 
-        p Che-Yu Wu is a multidisciplinary new media artist, designer, engineer, and entrepreneur from Taiwan, currently based in New York. With the sensitivity of art and engineering background. He creates generative arts which sampled from nature, physics, modernism art and turn them into algorithmic interactive art machines.
-        ul.mt-5
-          li Original creator of Seahams on ArtBlocks 
-          li Creator of CryptoPochi (Interactive NFT) 
-          li Algorithm Arts on Foundation , 15 works )
-          li Generative Art NFT License on Opensea, 21 items 
-          li Electriz - Upcoming Artblocks Project
 
     .row.mt-5
       .col-12

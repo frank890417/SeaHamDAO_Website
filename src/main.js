@@ -36,3 +36,8 @@ const analytics = getAnalytics(app);
 let vueApp = createApp(App);
 vueApp.component("Navbar", Navbar);
 vueApp.use(store).use(router).mount("#app");
+
+store.commit("setWidth", window.innerWidth);
+window.addEventListener("resize", () => {
+  store.commit("setWidth", window.innerWidth);
+});

@@ -29,6 +29,9 @@ export default {
         {
           url: "/about",
           label: "About"
+        },{
+          url: "/artist",
+          label: "Artist"
         },
         {
           url: "/news",

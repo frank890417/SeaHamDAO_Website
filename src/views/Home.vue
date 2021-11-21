@@ -3,7 +3,8 @@
   .container
     .row
       .col-12.col-lg-6.order-sm-1
-        iframe#superham.w-100(width="100%" height="800px" src="/sketch1338290/index.html")
+        iframe#superham.w-100(width="100%" height="800px" src="/sketch1338290/index.html",
+            :key="$store.state.width")
         br
         h4.strokeText @SuperHamHolder
       .col-12.col-lg-6
@@ -21,5 +22,5 @@ export default {
 <style lang="sass">
 .page.home
   .container
-    max-width: 1440px
+    max-width: 1600px
 </style>
