@@ -15,6 +15,7 @@
       .col-md-5.pt-5
         iframe( width="100%" height="400px" src="https://generator.artblocks.io/98000005")
         //- h2 {{$store.state.scrollY}}
+        .space-holder.d-md-none
         img.bg-strokeham(src="/about_strokeham.svg", :style="{transform: `rotate(${$store.state.scrollY/10}deg)`}")
     .row
       .col-12.text-left
@@ -112,6 +113,8 @@ export default {
 
 <style lang="sass">
 .about
+  .space-holder
+    height: 300px
   .why-hams
     font-size: 16vw
     white-space: nowrap
@@ -123,6 +126,10 @@ export default {
     position: absolute
     bottom: -20vh
     left: 0
+    @media only screen and (max-width: 768px)
+      width: 80%
+      bottom: 0vh
+      
   .link-why
     color: white
   .img-artist
