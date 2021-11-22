@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 // import { createMetaManager } from "vue-meta";
 import Navbar from "./components/Navbar";
+import SvgInline from "./components/SvgInline";
 import "animate.css/animate.min.css";
 
 // import fontawesome from "@fortawesome/fontawesome-free";
@@ -35,6 +36,7 @@ const analytics = getAnalytics(app);
 
 let vueApp = createApp(App);
 vueApp.component("Navbar", Navbar);
+vueApp.component("SvgInline", SvgInline);
 vueApp.use(store).use(router).mount("#app");
 // .use(createMetaManager());
 

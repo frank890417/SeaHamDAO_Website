@@ -2,9 +2,11 @@
 footer.mt-5
   .text-center
     a.link-social(href="https://twitter.com/sailobots" target="_blank")
-      i.fab.fa-twitter.
+      i.fab.fa-twitter
     a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank")
       i.fab.fa-discord
+    a.link-social(href="mailto:hello@hamily.life" target="_blank")
+      i.fas.fa-envelope
   .text-center.mt-3 
     a(href="https://twitter.com/cheyuwu345" target="_blank") Che-Yu Wu
     span &nbsp;&amp; The Hamily @ All right reserved

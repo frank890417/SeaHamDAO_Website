@@ -14,7 +14,7 @@
           | Source code derived from https://openprocessing.org/sketch/1150492 under CC-BY-SA 3.0 license. Modifications include: custom botGlasses variable added with 3 different cases; custom botLips variable added with 3 different cases; 10 sets of custom colors added; antennas, ear and nose size and geometric shape types updated.
       .col-md-5.pt-5
         iframe( width="100%" height="400px" src="https://generator.artblocks.io/98000005")
-        h2 {{$store.state.scrollY}}
+        //- h2 {{$store.state.scrollY}}
         img.bg-strokeham(src="/about_strokeham.svg", :style="{transform: `rotate(${$store.state.scrollY/10}deg)`}")
     .row
       .col-12.text-left
@@ -26,7 +26,8 @@
 
     .row.mt-5
       .col-12
-        img.w-100(src="/hamiverse_deco_2.svg")
+        .drawing-deco
+          SvgInline.w-100(src="/hamiverse_deco_2.svg")
         h2 The Manifesto
         //- h3 (Mission Statement, Concept, Points System)
         p The Hamily is a group of artists, collectors and general enthusiasts of the prosciutto coming together to act as stewards of the ham. We seek to grow the community in size and strength, facilitate the production of derivative works, and amass a treasury that can be deployed across a variety of initiatives to build awareness for the Sea Ham.
@@ -126,4 +127,14 @@ export default {
     color: white
   .img-artist
     // filter: saturate(0%) 
+
+  .drawing-deco
+    path
+      stroke-dasharray: 4000 1000
+      animation: dash 2s linear infinite
+
+    @keyframes dash 
+      to 
+        stroke-dashoffset: -5000
+    
 </style>
