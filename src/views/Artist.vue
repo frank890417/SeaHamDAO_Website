@@ -13,7 +13,10 @@
 
       .col-lg-7.mt-3
         p Che-Yu Wu is a multidisciplinary new media artist, designer, engineer, and entrepreneur from Taiwan, currently based in New York. With the sensitivity of art and engineering background. He creates generative arts which sampled from nature, physics, modernism art and turn them into algorithmic interactive art machines.
-        a.weblink(href="https://cheyuwu.com/" target="_blank") Artist Website 
+        a.weblink(href="https://cheyuwu.com/" target="_blank") 
+          span
+            SvgInline(src="/more_arrow.svg", style="width: 200px;display: inline-block;") 
+          span &nbsp;&nbsp;Artist Website 
         h4.mt-5 Current Works:
         ul
           li 
@@ -66,7 +69,8 @@
     a
       margin-left: 1rem
   .weblink
-    background-color: white
-    color: black
+    // background-color: white
+    color: white
     padding: 5px 20px
+    font-size: 1.3rem
 </style>

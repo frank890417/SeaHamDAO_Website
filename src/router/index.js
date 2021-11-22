@@ -84,8 +84,7 @@ router.afterEach((to, from) => {
       delay: "random(0,1)",
       css: {
         opacity: 0,
-        filter: "blur(30px)",
-        transform: `scale(2)`,
+        filter: "blur(15px)",
       },
     });
   }, 100);
