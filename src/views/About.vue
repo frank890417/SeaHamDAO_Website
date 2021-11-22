@@ -20,8 +20,13 @@
     .row
       .col-12.text-left
         a.link-why(href="https://blog.floors.cafe/why-hams/" target="_blank") 
+          h4.mt-5 The History of HAMS
           h2 BONE’s
           h1.why-hams WHY HAMS
+          a(href="https://blog.floors.cafe/why-hams/" target="_blank").link-readmore
+            span
+              SvgInline(src="/more_arrow.svg", style="width: 200px;display: inline-block;")
+            span.ml-3.text-read-more Read more 
 
 
 
@@ -113,13 +118,18 @@ export default {
 
 <style lang="sass">
 .about
+  iframe
+    z-index: 1
+    position: relative
   .space-holder
-    height: 300px
+    height: 150px
   .why-hams
     font-size: 16vw
     white-space: nowrap
     margin-left: -5vw
     font-weight: 900s
+    @media only screen and (max-width: 768px)
+      margin-left: 0
    
   .bg-strokeham
     width: 110%
@@ -135,6 +145,14 @@ export default {
   .img-artist
     // filter: saturate(0%) 
 
+  .link-readmore
+    float: right
+    @media only screen and (max-width: 768px)
+      float: initial
+    
+  .text-read-more
+    margin-top: -10px
+    font-size: 1.3rem
   .drawing-deco
     path
       stroke-dasharray: 4000 1000
