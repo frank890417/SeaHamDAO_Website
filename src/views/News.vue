@@ -4,7 +4,7 @@
     .row 
       .col-12
         h1.animated.fadeInUp 
-          span About
+          span News
           br
           .strokeText HAMILY UPDATE
 
