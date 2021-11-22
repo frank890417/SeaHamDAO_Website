@@ -13,7 +13,7 @@
         .col-12.col-md-7
           h2.mt-5 
             span THE ORIGINAL HAM
-          p sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu
+          p Sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu
           a.btn.btn-primary(href="https://opensea.io/assets/art-blocks-factory?search[query]=Sail-o-bot&search[sortAscending]=true&search[sortBy]=PRICE",
                             target="_blank") View Collection
         .col-12.col-md-5
@@ -41,7 +41,7 @@
           iframe( width="100%" height="300px" src="https://cryptopochi.com/os/os-action.html?tokenHash=0x2cb92b7a1828031c5e2cfbd9d5fadb227aac000fa642d071fc6c3518432c6d4e")
         .col-12.col-md-7
           h2.mt-5 
-            span CRYPTO POCHI
+            span CRYPTOPOCHI
           p CryptoPochi is an interactive NFT project that captures your daily life emotions and shapes. They laugh, cry, being lazy all the times.
           a.btn.btn-primary.mt-4.mb-4(href="https://opensea.io/collection/cryptopochi",
                             target="_blank") View Collection

@@ -1,15 +1,24 @@
 <template lang="pug">
 div.text-left
   Navbar 
+  metainfo
+    template(v-slot:title="{ content }") {{ content ? `${content} | SITE_NAME` : `SITE_NAME` }}
   transition(name="page")
     router-view.pageframe(:key="$router.path")
   Footer
 </template>
 
 <script>
+//https://stackoverflow.com/questions/66228340/how-to-use-vue-3-meta-with-vue-js-3
+// import { useMeta } from 'vue-meta'
 import Footer from "@/components/Footer"
 export default {
-  
+  // setup(){
+  //    useMeta({
+  //     title: '',
+  //     htmlAttrs: { lang: 'en', amp: true }
+  //   })
+  // },
   components: {
     Footer
   }
@@ -79,7 +88,10 @@ iframe{
     
 a{
 
-  color: white
+  color: white;
+  &:hover{
+    color: white;
+  }
 }
 
 #nav {

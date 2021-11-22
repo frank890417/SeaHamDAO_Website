@@ -16,13 +16,27 @@
         a.weblink(href="https://cheyuwu.com/" target="_blank") Artist Website 
         h4.mt-5 Current Works:
         ul
-          li Original creator of Seahams on ArtBlocks 
-          li Creator of CryptoPochi (Interactive NFT) 
-          li Project Che-Yu Wu X Nobody
-          li Algorithm Arts on Foundation , 15 works )
-          li Generative Art NFT License on Opensea, 21 items 
-          li Electriz - Upcoming Artblocks Project
-          li Upcoming ...🍔 ?
+          li 
+            a(href="https://opensea.io/assets/art-blocks-factory?search[query]=Sail-o-bot&search[sortAscending]=true&search[sortBy]=PRICE",
+              target="_blank") Original creator of Seahams on ArtBlocks, 750 items 
+          li
+            a(href="https://opensea.io/collection/cryptopochi",
+              target="_blank") Creator of CryptoPochi, 732 items 
+          li
+            a(href="https://opensea.io/collection/cheyuwuxnobody",
+              target="_blank") Project Che-Yu Wu X Nobody, 1092 items 
+          li
+            a(href="https://foundation.app/@cheyuwu",
+              target="_blank") Algorithm Arts on Foundation, 15 items 
+          li
+            a(href="https://opensea.io/collection/che-yu-wu-generative-art",
+              target="_blank") Generative Art NFT License on Opensea, 21 items 
+          li
+            a(href="",
+              target="_blank") Electriz - Upcoming Artblocks Project 
+          li
+            a(href="",
+              target="_blank") Upcoming ...🍔 ?
 
 
         .social-links

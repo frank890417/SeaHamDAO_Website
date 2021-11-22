@@ -9,10 +9,13 @@
           span.strokeText WHY HAMS
         p Sail-o-bots elegantly combine distinct concepts and perceptions about basic human needs through Maslow's Hierarchy of Needs. They are the mischief of the sea, each with their own tiny boats to sail on, but they prefer to stand still and watch the sunset. Until the next day comes, Sail-o-bots wait: they do not eat, they do not sleep. That is why Sail-o-bots  are on edge from time to time. Do not judge them quickly. Each bot has its own messages if you take the time to listen, or you can simply choose to stare at their faces instead.  Sail-o-bots cannot stay still, that is who they are. They might be called inconsistent, but having multiple disciplines is really important for them and has its advantages as they will never stop trying to discover more. Sail-o-bots are always going back and forward around several versions, do not think that they will stop at one version since they are constantly rediscovering themselves. 
           br
-          | sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu (https://twitter.com/Majer666666) Source code derived from https://openprocessing.org/sketch/1150492 under CC-BY-SA 3.0 license. Modifications include: custom botGlasses variable added with 3 different cases; custom botLips variable added with 3 different cases; 10 sets of custom colors added; antennas, ear and nose size and geometric shape types updated.
+        p Sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu
+          a(href="https://twitter.com/cheyuwu345" target="_blank")
+          | Source code derived from https://openprocessing.org/sketch/1150492 under CC-BY-SA 3.0 license. Modifications include: custom botGlasses variable added with 3 different cases; custom botLips variable added with 3 different cases; 10 sets of custom colors added; antennas, ear and nose size and geometric shape types updated.
       .col-md-5.pt-5
         iframe( width="100%" height="400px" src="https://generator.artblocks.io/98000005")
-        img.bg-strokeham(src="/about_strokeham.svg")
+        h2 {{$store.state.scrollY}}
+        img.bg-strokeham(src="/about_strokeham.svg", :style="{transform: `rotate(${$store.state.scrollY/10}deg)`}")
     .row
       .col-12.text-left
         a.link-why(href="https://blog.floors.cafe/why-hams/" target="_blank") 

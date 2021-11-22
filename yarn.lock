@@ -3662,11 +3662,6 @@
   "resolved" "https://registry.yarnpkg.com/deepmerge/-/deepmerge-1.5.2.tgz"
   "version" "1.5.2"
 
-"deepmerge@^4.2.2":
-  "integrity" "sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg=="
-  "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.2.2.tgz"
-  "version" "4.2.2"
-
 "default-gateway@^4.2.0":
   "integrity" "sha512-h6sMrVB1VMWVrW13mSc6ia/DwYYw5MN6+exNu1OaJeFac5aSAvwM7lZ0NVfTABuSkQelr4h5oebg3KB1XPdjgA=="
   "resolved" "https://registry.yarnpkg.com/default-gateway/-/default-gateway-4.2.0.tgz"
@@ -8892,12 +8887,10 @@
     "vue-hot-reload-api" "^2.3.0"
     "vue-style-loader" "^4.1.0"
 
-"vue-meta@^2.4.0":
-  "integrity" "sha512-XEeZUmlVeODclAjCNpWDnjgw+t3WA6gdzs6ENoIAgwO1J1d5p1tezDhtteLUFwcaQaTtayRrsx7GL6oXp/m2Jw=="
-  "resolved" "https://registry.npmjs.org/vue-meta/-/vue-meta-2.4.0.tgz"
-  "version" "2.4.0"
-  dependencies:
-    "deepmerge" "^4.2.2"
+"vue-meta@^3.0.0-alpha.9":
+  "integrity" "sha512-/ff7qNKy4c5NwmDl6N5XK2hhiXEdMeUxvk+SXCs40W9DOgu7VWGqPtgdSnXHnYMRoofkT/nKHE+vXklJ47r9Dw=="
+  "resolved" "https://registry.npmjs.org/vue-meta/-/vue-meta-3.0.0-alpha.9.tgz"
+  "version" "3.0.0-alpha.9"
 
 "vue-router@^4.0.0-0":
   "integrity" "sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg=="

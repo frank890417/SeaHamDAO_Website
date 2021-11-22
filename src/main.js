@@ -2,8 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import VueMeta from "vue-meta";
-
+// import { createMetaManager } from "vue-meta";
 import Navbar from "./components/Navbar";
 import "animate.css/animate.min.css";
 
@@ -37,9 +36,14 @@ const analytics = getAnalytics(app);
 let vueApp = createApp(App);
 vueApp.component("Navbar", Navbar);
 vueApp.use(store).use(router).mount("#app");
-vueApp.use(VueMeta);
+// .use(createMetaManager());
 
 store.commit("setWidth", window.innerWidth);
+
 window.addEventListener("resize", () => {
   store.commit("setWidth", window.innerWidth);
+});
+
+window.addEventListener("scroll", () => {
+  store.commit("setScrollY", window.scrollY);
 });
