@@ -18,6 +18,9 @@
             span.line THE ATOM OF HAM
             br
             span.line START AUCTION
+          .countdown
+            .number {{ displayTime }}
+            //- .bid Current Bid 5ETH
           .link-readmore
             span
               SvgInline(src="/more_arrow.svg", style="width: 200px;display: inline-block;")
@@ -45,12 +48,46 @@
       //-     br
       //-     | sail-o-bots is based on the original generative project Strange Robots by Che-Yu Wu (https://twitter.com/Majer666666) Source code derived from https://openprocessing.org/sketch/1150492 under CC-BY-SA 3.0 license. Modifications include: custom botGlasses variable added with 3 different cases; custom botLips variable added with 3 different cases; 10 sets of custom colors added; antennas, ear and nose size and geometric shape types updated.
 </template>
+
+<script>
+import * as dayjs from "dayjs"
+export default {
+  data(){
+    return {
+      currentTime: null
+    }
+  },
+  mounted(){
+    setInterval(()=>{
+      this.currentTime = new Date()
+    },500)    
+  },
+  computed:{
+    displayTime(){
+      const date1 = dayjs('2021-11-24T00:13:00Z')
+      const date2 = dayjs( this.currentTime )
+      // console.log(date1,date2)
+      let diff =  date1.diff(date2)
+      if (diff<0) diff=0
+      return dayjs(diff).format('HH:mm:ss') 
+    }
+  }
+  
+}
+</script>
+
 <style lang="sass">
 .page.news
   .news-info  
     margin-left: -100px
     margin-top: 50px
-
+    .countdown
+      margin-left: 100px
+      font-size: 3rem
+      font-weight: 800
+      @media only screen and (max-width: 768px)
+        margin-left: 0
+      
         
     .news-title .line
       background-color: black
