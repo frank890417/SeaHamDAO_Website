@@ -17,8 +17,10 @@
           h2.news-title 
             span.line THE ATOM OF HAM
             br
-            span.line START AUCTION
-          .countdown
+            span.line ENDS AT 10.69ETH 
+            span.line @thevelvetrut
+
+          //.countdown
             .number {{ displayTime }}
             //- .bid Current Bid 5ETH
           .link-readmore

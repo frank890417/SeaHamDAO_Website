@@ -7,7 +7,7 @@
             :key="$store.state.width")
         //- br
         //- h3 {{ $store.state }}
-        //- h4.strokeText @SuperHamHolder
+        h4.strokeText @thevelvetrut
       .col-12.col-lg-6
         img.w-100(src="/index_thehamily.png")
 </template>
