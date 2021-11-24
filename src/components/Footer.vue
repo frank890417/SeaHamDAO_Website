@@ -12,6 +12,8 @@ footer.mt-5
     span &nbsp;&amp; The Hamily @ All right reserved
     br
     span Contact: hello@hamily.life
+    br
+    span thehamily.eth
 </template>
 <style lang="sass" scoped>
 .link-social
