@@ -4,7 +4,7 @@
     .row
       .col-12
         h1.animated.fadeInUp 
-          span Artist
+          span Artists
           br
           .strokeText Che-Yu Wu 
     .row
@@ -35,8 +35,8 @@
             a(href="https://opensea.io/collection/che-yu-wu-generative-art",
               target="_blank") Generative Art NFT License on Opensea, 21 items 
           li
-            a(href="",
-              target="_blank") Electriz - Upcoming Artblocks Project 
+            a(href="https://cheyuwu.com/nft",
+              target="_blank") Project Electriz - Upcoming Artblocks Project
           li
             a(href="",
               target="_blank") Upcoming ...🍔 ?
