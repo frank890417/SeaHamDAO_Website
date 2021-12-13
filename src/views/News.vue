@@ -17,7 +17,7 @@
           loop,
           muted,
           autoplay,
-          src="https://ipfs.io/ipfs/QmWaXrUmFQCzyHcRZeJ9YjVdw39boTF8DE2L2NPzLQmddo/nft.mp4"
+          src="https://d2ybmb80bbm9ts.cloudfront.net/md/do/QmWaXrUmFQCzyHcRZeJ9YjVdw39boTF8DE2L2NPzLQmddo/nft_q4.mp4"
         )
       a.col-sm-7(
         href="https://foundation.app/@thehamily/~/116676",
@@ -28,9 +28,10 @@
           h2.news-title 
             span.line THE ATOM OF HAM - #AM
             br
-            span.line Start Auction
+            span.line ENDS AT 5.69ETH
+            span.line @sunday_
 
-          .countdown
+          //.countdown
             .number {{ displayTime }}
             //- .bid Current Bid 5ETH
           .link-readmore
