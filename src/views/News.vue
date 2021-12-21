@@ -24,7 +24,7 @@
         target="_blank"
       )
         .news-info
-          h3.date.news-date 2021/12/11
+          h3.date.news-date 2021/12/21
           h2.news-title 
             span.line THE ATOM OF HAM - #S
             br
