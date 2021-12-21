@@ -17,6 +17,55 @@
           loop,
           muted,
           autoplay,
+          src="https://d2ybmb80bbm9ts.cloudfront.net/mQ/EN/QmfJAfaKpeL1rgUsG5teqgN9EZQkj6NXTyfAkpKdjGmQEN/nft_q4.mp4"
+        )
+      a.col-sm-7(
+        href="https://foundation.app/@thehamily/~/121953",
+        target="_blank"
+      )
+        .news-info
+          h3.date.news-date 2021/12/11
+          h2.news-title 
+            span.line THE ATOM OF HAM - #S
+            br
+            //- span.line ENDS AT 5.69ETH
+            //- span.line @sunday_
+            span.line Started Auction!
+
+          .countdown
+            .number {{ displayTime }}
+            //- .bid Current Bid 5ETH
+          .link-readmore
+            span
+              SvgInline(
+                src="/more_arrow.svg",
+                style="width: 200px; display: inline-block"
+              )
+            span.ml-3.text-read-more Go To the Auction
+
+      .col-12.mt-5
+        p Created by sensei Che-Yu, the Sulfur Ham is a 1/1 premium craft ham. This sulfuric ham is comprised of cosmically abundant, but essential elements for life in the Hamily.
+        p Seaham is a meme and a glitch in the world of digital art.
+          br
+          | They are transformed into rhythms that dominate life.
+          br
+          | Their spirit is deconstructed into pixels and spread to the world.
+          br 
+          | Continue to float in the digital sea and start countless journeys with immortality.
+        p The Sulfur ham will be the third craft ham to be auctioned on behalf of The Hamily.
+        p The holder of the premium ham will gain access to the Hamily DAO and proceeds from the auction will go into the Hamily treasury, with the goal of better supporting and growing the loyal community.
+
+      .hr
+
+    .row 
+      a.col-sm-5(
+        href="https://foundation.app/@thehamily/~/116676",
+        target="_blank"
+      )
+        video.w-100(
+          loop,
+          muted,
+          autoplay,
           src="https://d2ybmb80bbm9ts.cloudfront.net/md/do/QmWaXrUmFQCzyHcRZeJ9YjVdw39boTF8DE2L2NPzLQmddo/nft_q4.mp4"
         )
       a.col-sm-7(
@@ -119,7 +168,7 @@ export default {
   },
   computed: {
     displayTime() {
-      const date1 = dayjs("2021-12-12T10:53:50Z");
+      const date1 = dayjs("2021-12-23T20:51:50Z");
       const date2 = dayjs(this.currentTime);
       // console.log(date1,date2)
       let diff = date1.diff(date2);
