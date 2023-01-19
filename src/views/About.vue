@@ -19,11 +19,11 @@
         img.bg-strokeham(src="/about_strokeham.svg", :style="{transform: `rotate(${$store.state.scrollY/10}deg)`}")
     .row
       .col-12.text-left
-        a.link-why(href="https://blog.floors.cafe/why-hams/" target="_blank") 
+        a.link-why(href="/whyhams/" target="_blank") 
           h4.mt-5 The History of HAMS
           h2 BONE’s
           h1.why-hams WHY HAMS
-          a(href="https://blog.floors.cafe/why-hams/" target="_blank").link-readmore
+          a(href="/whyhams/" target="_blank").link-readmore
             span
               SvgInline(src="/more_arrow.svg", style="width: 200px;display: inline-block;")
             span.ml-3.text-read-more Read more 

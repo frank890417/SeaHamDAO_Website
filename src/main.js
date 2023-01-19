@@ -6,6 +6,7 @@ import store from "./store";
 import Navbar from "./components/Navbar";
 import SvgInline from "./components/SvgInline";
 import "animate.css/animate.min.css";
+import { VueMasonryPlugin } from 'vue-masonry';
 
 // import fontawesome from "@fortawesome/fontawesome-free";
 import "@fortawesome/fontawesome-free/js/all.js";
@@ -37,8 +38,12 @@ const analytics = getAnalytics(app);
 let vueApp = createApp(App);
 vueApp.component("Navbar", Navbar);
 vueApp.component("SvgInline", SvgInline);
+import Tilt from 'vanilla-tilt-vue'
+vueApp.component("Tilt", Tilt);
 vueApp.use(store).use(router).mount("#app");
 // .use(createMetaManager());
+
+vueApp.use(VueMasonryPlugin)
 
 store.commit("setWidth", window.innerWidth);
 
