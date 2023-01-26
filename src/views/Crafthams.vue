@@ -11,11 +11,14 @@
                 //- .strokeText BEST HAM & POCHI<br>MEMES
     .container.pb-5
         .row
-            .col-sm-6
+            .col-sm-6.order-1.order-sm-5
                 h1.animated.fadeInUp 
                     span Crafthams
                 h2.strokeText "WANT SOME HAMS?"
-            .col-sm-6
+                br
+                a.btn.btn-primary.mt-4.mb-4(href="https://opensea.io/collection/crafthams",
+                            target="_blank") View Collection
+            .col-sm-6.order-2.order-sm-1
                 img.w-100(src="/img/crafthams/_.avif" alt="ham")
 
     //- .album.py-5.bg-dark
@@ -26,7 +29,7 @@
                     img(:src='meme.src' alt='')
                     .card-body
                         p.card-text.fs-6
-                        | {{meme.title}} by 
+                        | {{meme.title}}
                         small
                             a( target='_blank' :href='`https://twitter.com/${meme.author}`')
                                 | {{meme.author}} 
@@ -40,7 +43,7 @@
 import memedata from "@/assets/memedata.json";
 export default {
   data: () => ({
-    memedata: Array.from({ length: 24 }, (_, i) => ({
+    memedata: Array.from({ length: 25 }, (_, i) => ({
       title: `Craftham #${i}`,
       src: `/img/crafthams/${i}.avif`
     }))
