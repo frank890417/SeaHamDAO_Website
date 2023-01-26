@@ -63,7 +63,7 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/Contributions.vue"),
   },
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     component: Home,
   }
 ];
