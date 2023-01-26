@@ -24,28 +24,45 @@
     //- .album.py-5.bg-dark
     .container-fluid
         div(v-masonry="containerId" transition-duration="0.5s" item-selector=".item")
-            .item(v-masonry-tile).col-lg-4.p-0(v-for="meme in memedata")
+            a.item(v-masonry-tile).col-lg-4.p-0(v-for="meme in memedata"
+                :href="meme.opensea_url" target="_blank" rel="noopener noreferrer"
+                :key="meme.id"
+                )
                 Tilt.card
                     img(:src='meme.src' alt='')
                     .card-body
                         p.card-text.fs-6
                         | {{meme.title}}
                         small
-                            a( target='_blank' :href='`https://twitter.com/${meme.author}`')
+                            a.ml-3( target='_blank' :href='meme.opensea_url')
                                 | {{meme.author}} 
-                                i.fab.fa-twitter
+                                img(src="/img/opensea-icon.png" width="35" )
                             a.download(:href='meme.src' download='')
                                 i.fas.fa-arrow-down
                 
 </template>
 
+
 <script>
-import memedata from "@/assets/memedata.json";
+// https://opensea.io/collection/crafthams?search[sortAscending]=false&search[sortBy]=CREATED_DATE
+// let result = Array.from(document.querySelectorAll(".dVNeWL.hGwMMY")).map(a=>{
+//     var myRe = /(\/assets.*?)\".*?#(.*?)\</gm;
+// var myArray = myRe.exec( a.innerHTML);
+//    return {
+//        "opensea_url": "https://opensea.io"+ myArray?.[1],
+//        "id":  myArray?.[2],
+//    }
+// })
+//result.sort((a,b)=>a.id-b.id)
+//JSON.stringify(result)
+
+import crafthamdata from "@/assets/crafthamdata.json";
 export default {
   data: () => ({
-    memedata: Array.from({ length: 25 }, (_, i) => ({
-      title: `Craftham #${i}`,
-      src: `/img/crafthams/${i}.avif`
+    memedata: crafthamdata.map(a => ({
+      ...a,
+      title: `Craftham #${a.id}`,
+      src: `/img/crafthams/${a.id}.avif`
     }))
   }),
   mounted() {}
