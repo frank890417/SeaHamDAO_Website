@@ -5,6 +5,8 @@ div.nav-container
       li(v-for="item in items")
         router-link(:to="item.url") {{item.label}}
       li
+        a.link-social(href="https://foundation.app/@thehamily" target="_blank").mr-4
+          img(src="/img/foundation_logo.png" height="20")
         a.link-social(href="https://twitter.com/sailobots" target="_blank").mr-4
           i.fab.fa-twitter
         a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank").mr-4
