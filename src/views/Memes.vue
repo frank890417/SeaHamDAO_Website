@@ -12,7 +12,7 @@
           //- .strokeText BEST HAM & POCHI<br>MEMES
   .container-fluid
   //- .album.py-5.bg-dark
-  .container
+  .container-fulid
     //src='(.*?)'[\S\s]*?fs-6\n.*?\| (.*) by[\S\s]*?\| (\@.*)
     div(v-masonry="containerId" transition-duration="0.5s" item-selector=".item")
       .item(v-masonry-tile).col-lg-4.p-0(v-for="meme in memedata")

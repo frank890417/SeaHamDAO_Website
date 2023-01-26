@@ -22,7 +22,7 @@
                 img.w-100(src="/img/crafthams/_.avif" alt="ham")
 
     //- .album.py-5.bg-dark
-    .container
+    .container-fluid
         div(v-masonry="containerId" transition-duration="0.5s" item-selector=".item")
             .item(v-masonry-tile).col-lg-4.p-0(v-for="meme in memedata")
                 Tilt.card
