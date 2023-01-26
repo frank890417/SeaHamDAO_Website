@@ -3,14 +3,21 @@
     .container
         .row 
             .col-12
-            h1.animated.fadeInUp 
-                span Crafthams
+            
             //- a(href="https://twitter.com/robotlovecoffee" target="_blank") Page originally contributed by @robotlovecoffee
             br
             br
                 //- br
                 //- .strokeText BEST HAM & POCHI<br>MEMES
-    .container-fluid
+    .container.pb-5
+        .row
+            .col-sm-6
+                h1.animated.fadeInUp 
+                    span Crafthams
+                h2.strokeText "WANT SOME HAMS?"
+            .col-sm-6
+                img.w-100(src="/img/crafthams/_.avif" alt="ham")
+
     //- .album.py-5.bg-dark
     .container
         div(v-masonry="containerId" transition-duration="0.5s" item-selector=".item")
@@ -33,7 +40,7 @@
 import memedata from "@/assets/memedata.json";
 export default {
   data: () => ({
-    memedata: Array.from({ length: 22 }, (_, i) => ({
+    memedata: Array.from({ length: 24 }, (_, i) => ({
       title: `Craftham #${i}`,
       src: `/img/crafthams/${i}.avif`
     }))

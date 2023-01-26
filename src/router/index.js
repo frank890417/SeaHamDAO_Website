@@ -55,7 +55,7 @@ const routes = [
   },
   {
     path: "/crafthams",
-    name: "crafthams",
+    name: "Crafthams",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -64,7 +64,7 @@ const routes = [
   },
   {
     path: "/crafthams/:id",
-    name: "crafthams",
+    name: "crafthams_items",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
