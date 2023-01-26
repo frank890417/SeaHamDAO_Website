@@ -62,6 +62,10 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Contributions.vue"),
   },
+  {
+    path: '*',
+    component: Home,
+  }
 ];
 
 const router = createRouter({
