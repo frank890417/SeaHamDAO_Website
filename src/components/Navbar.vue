@@ -13,7 +13,7 @@ div.nav-container
           i.fas.fa-envelope
     img.bg-strokeham(src="/about_strokeham.svg")
   router-link(to="/")
-    img.logo(src="hamLogo.svg")
+    img.logo(src="/img/hamLogo.svg")
   .d-md-none.toggle(@click="navOpen=!navOpen")
     .icon(v-if="navOpen")
       i.fas.fa-times
@@ -23,15 +23,15 @@ div.nav-container
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-
       navOpen: false,
       items: [
         {
           url: "/about",
           label: "About"
-        },{
+        },
+        {
           url: "/artist",
           label: "Artist"
         },
@@ -42,23 +42,22 @@ export default {
         {
           url: "/memes",
           label: "Memes"
-        },{
+        },
+        {
           url: "/hamiverse",
           label: "Hamiverse"
-        },
+        }
         // {
         //   url: "/contact",
         //   label: "Contact"
         // }
       ]
-      
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="sass">
-
 // $grid-breakpoints: (
 //   xs: 0,
 //   sm: 576px,
@@ -70,22 +69,22 @@ nav
   // float: right
   padding: 20px
   display: flex
-  justify-content: flex-end 
+  justify-content: flex-end
   .closeBtn
-    position: fixed 
+    position: fixed
     right: 0
     top: 0
     font-size: 30px
-    
+
   ul
     list-style: none
     display: flex
     justify-content: flex-end
-    li 
+    li
       margin-left: 50px
       font-size: 1.4rem
       font-weight: 900
-      
+
       a
         color: white
         &:hover
@@ -93,12 +92,11 @@ nav
         &.router-link-exact-active
           color: transparent
           -webkit-text-stroke: 1px white
-          
-      
+
   .bg-strokeham
     display: none
   @media only screen and (max-width: 768px)
-    
+
     position: fixed
     left: 0
     top: 0
@@ -110,7 +108,7 @@ nav
     display: none
     opacity: 0
     &.open
-      display: block  
+      display: block
       opacity: 1
     .bg-strokeham
       position: absolute
@@ -120,14 +118,14 @@ nav
       pointer-events: none
       opacity: 0.8
       transform: rotate(30deg)
-      
+
     .logo
       position: fixed
       left: 50px
       top: 50px
       width: 80px
 
-    ul 
+    ul
       flex-direction: column
       justify-content: center
       align-items: flex-start
@@ -135,7 +133,7 @@ nav
       height: 100%
       padding: 0
       text-align: left
-      li 
+      li
         font-size: 4rem
         margin-left: 0
         a
@@ -149,7 +147,7 @@ nav
   margin: 10px
 
   &:hover
-    transform: scale(1.1) rotate(5deg) 
+    transform: scale(1.1) rotate(5deg)
 
 .toggle
   position: fixed
@@ -157,7 +155,5 @@ nav
   top: 20px
   color: white
   z-index: 500
-  font-size: 15vw 
-
-
+  font-size: 15vw
 </style>
