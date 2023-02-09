@@ -8,6 +8,48 @@
           br
           .strokeText HAMILY UPDATE
 
+
+
+    .row 
+      a.col-sm-5(
+        href="https://app.manifold.xyz/c/HamilyLimitedEditions",
+        target="_blank"
+      )
+        img.w-100( 
+          src="/img/hamilydrop-guido.jpeg"
+        )
+      a.col-sm-7(
+        href="https://app.manifold.xyz/c/HamilyLimitedEditions",
+        target="_blank"
+      )
+        .news-info
+          h3.date.news-date 2023/2/9
+          h2.news-title 
+            span.line Hamily Drops
+            br
+            //- span.line ENDS AT 5.69ETH
+            //- span.line @sunday_
+            span.line The first Hamily Limited Editions Drop!
+
+          //- .countdown
+          //-   .number {{ displayTime }}
+            //- .bid Current Bid 5ETH
+          .link-readmore
+            span
+              SvgInline(
+                src="/more_arrow.svg",
+                style="width: 200px; display: inline-block"
+              )
+            span.ml-3.text-read-more Go To Claim
+
+
+        .col-12.mt-5
+          p The claims page for whitelisted Hamily Asset holders will go live at 11AM EST, and verified addresses must claim their mints within 24 hours.
+            br
+          p Any unclaimed assets will be burned. Stay tuned for the Claims Page post!
+
+      .hr
+
     .row 
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
@@ -158,7 +200,7 @@ import * as dayjs from "dayjs";
 export default {
   data() {
     return {
-      currentTime: null,
+      currentTime: null
     };
   },
   mounted() {
@@ -174,8 +216,8 @@ export default {
       let diff = date1.diff(date2);
       if (diff < 0) diff = 0;
       return dayjs(diff).format("HH:mm:ss");
-    },
-  },
+    }
+  }
 };
 </script>
 
