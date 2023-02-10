@@ -4,9 +4,14 @@ div.nav-container
     ul
       li(v-for="item in items")
         router-link(:to="item.url") {{item.label}}
-      li
+      li.display-flex
+
+        a.link-social.gold(href="https://app.manifold.xyz/c/HamilyLimitedEditions" target="_blank").mr-4
+          | Drop Claim!
+      
         a.link-social(href="https://foundation.app/@thehamily" target="_blank").mr-4
           img(src="/img/foundation_logo.png" height="20")
+
         a.link-social(href="https://twitter.com/sailobots" target="_blank").mr-4
           i.fab.fa-twitter
         a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank").mr-4
@@ -64,6 +69,9 @@ export default {
 </script>
 
 <style lang="sass">
+$spotOne: #26115a
+$spotTwo: #ec008c
+$spotThree: #ff0000
 // $grid-breakpoints: (
 //   xs: 0,
 //   sm: 576px,
@@ -71,6 +79,57 @@ export default {
 //   lg: 992px,
 //   xl: 1200px
 // ) !default;
+.gold
+  white-space: nowrap
+  position: relative
+  margin: auto
+  padding-right: 1.5rem
+  padding-left: 1.5rem
+  padding: 10px 20px
+  font-size: 1rem
+  line-height: 3rem
+  text-decoration: none
+  color: white
+  text-transform: uppercase
+  letter-spacing: 2px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-image: linear-gradient( 160deg, $spotThree, $spotTwo )
+  border-radius: 30px
+  cursor: pointer
+  user-select: none
+  // box-shadow:
+  //   0 0 0 0 $spotTwo,
+  //   0.5rem 0.5rem 30px mix(black, $spotOne, 50%)
+  transition: box-shadow 0.6s
+  text-decoration: none
+  // &:hover
+  box-shadow: 0 0 30px 1px $spotTwo, 0.1rem 0.1rem 20px mix(black, $spotOne, 50%)
+
+  &:after
+    content: ''
+    position: absolute
+    top: 2px
+    right: 2px
+    bottom: 2px
+    left: 2px
+    border-radius: 30px
+    background-image: linear-gradient( 170deg, rgba(white, 0.3), rgba(white, 0) )
+    pointer-events: none
+
+  &:hover
+    text-decoration: none
+    transform: scale(1.1)
+    box-shadow: 0 0 60px 2px $spotTwo, 0.5rem 0.5rem 30px mix(black, $spotOne, 50%)
+
+  // &:hover
+  //   background: linear-gradient(90deg, #FFD700 0%, #fff 100%)
+  //   color: black
+  //   padding: 10px 20px
+  //   border-radius: 50px
+  //   transform: scale(1.1)
+  //   text-decoration: none
+
 nav
   // float: right
   padding: 20px
