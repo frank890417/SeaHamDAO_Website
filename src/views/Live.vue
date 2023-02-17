@@ -7,21 +7,26 @@
           span Live
           br
           span.strokeText TRY ON
-    .row
-      .col-12
+    .row.justify-content-center
+      .col-md-10
         iframe#liveham.w-100(
           width="100%",
           height="800px",
-          src="/liveham/index.html",
+          src="/Hamily-Live-Face/98000611.htm",
           :key="$store.state.width"
         )
+        br
+        snap By 
+        a(href = "https://mobile.twitter.com/minimumfunction") CinMin, 
+        a(href = "https://twitter.com/AnnChen0301") AjjNNA
+
 </template>
 <script>
 export default {
   mounted() {
     let elHam = document.querySelector("#liveham");
     let ww = elHam.offsetWidth;
-    elHam.setAttribute("height", ww + "px");
+    elHam.setAttribute(ww + "px", ww + "px");
   },
 };
 </script>
