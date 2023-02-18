@@ -9,12 +9,13 @@
           span.strokeText TRY ON
     .row.justify-content-center
       .col-md-10
-        iframe#liveham.w-100(
+        iframe#liveham(
           width="100%",
           height="800px",
           src="/Hamily-Live-Face/98000611.htm",
           :key="$store.state.width"
         )
+        br
         br
         snap By 
         a(href = "https://mobile.twitter.com/minimumfunction") CinMin, 
@@ -26,7 +27,10 @@ export default {
   mounted() {
     let elHam = document.querySelector("#liveham");
     let ww = elHam.offsetWidth;
-    elHam.setAttribute(ww + "px", ww + "px");
+    let hh = elHam.offsetHeight;
+    console.log([ww,hh])
+    elHam.setAttribute("height", ww + "px");
+    // iframe.setAttribute("height",ww+"px")
   },
 };
 </script>
