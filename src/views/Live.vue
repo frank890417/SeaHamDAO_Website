@@ -11,7 +11,7 @@
       .col-md-10
         iframe#liveham(
           width="100%",
-          height="800px",
+          height="750px",
           src="/Hamily-Live-Face/98000611.htm",
           :key="$store.state.width"
         )
@@ -29,7 +29,10 @@ export default {
     let ww = elHam.offsetWidth;
     let hh = elHam.offsetHeight;
     console.log([ww,hh])
-    elHam.setAttribute("height", ww + "px");
+    elHam.setAttribute("width", ww + "px");
+    if(window.innerWidth<450){
+      elHam.setAttribute("height", ww + "px");
+    }
     // iframe.setAttribute("height",ww+"px")
   },
 };
