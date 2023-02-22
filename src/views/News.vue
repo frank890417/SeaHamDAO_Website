@@ -45,7 +45,7 @@
         .col-12.mt-5
           //- p SEIZE THE SEAHAMS
           //-   br
-          p Hamily Limited Editions Claims:
+          p Hamily Limited 750 Editions Claims:
             br
             | SEIZE THE SEAHAMS
             br
