@@ -6,7 +6,7 @@ div.nav-container
         router-link(:to="item.url") {{item.label}}
       li.display-flex
 
-        a.link-social.gold(href="https://app.manifold.xyz/c/HamilyLimitedEditions" target="_blank").mr-4
+        a.link-social.gold(href="https://app.manifold.xyz/c/HamilyLimitedEditions2" target="_blank").mr-4
           | Drop Claim!
       
         a.link-social(href="https://foundation.app/@thehamily" target="_blank").mr-4
