@@ -17,6 +17,9 @@
         snap By 
         a(href = "https://mobile.twitter.com/minimumfunction") Cin-Min, 
         a(href = "https://twitter.com/AnnChen0301") AjjNNA
+        br
+        br
+        p 2023/03/06 v1.0 Live HAM release! Try on, record, and share how you HAM
       .col-md-1
 
 </template>
