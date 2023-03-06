@@ -65,9 +65,18 @@ canvas {
 #record_img{
   width: 100%;
 }
+#download_hint{
+  display: none;
+  position: absolute;
+  font-size: 20%;
+  color: #ffffff;
+  font-family: Roboto;
+  z-index: 100;
+}
 </style></head>
 <body>
     <button id="save_canvas"><img src="img/Record.png" id="record_img"></button>
+    <div id="download_hint">downloading···</div>
     <script src="sketch.js"></script>
     <script src="recordCanvas.js"></script>
 </body></html>

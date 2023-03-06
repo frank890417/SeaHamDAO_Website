@@ -12,6 +12,8 @@ click on stop record
 allow download files
 */
 var btn = document.querySelector("button#save_canvas");
+var hint = document.querySelector("#download_hint");
+hint.setAttribute('style', 'white-space: pre;');
 var chunks = [];
 var gif
 var recordGif = false
@@ -67,16 +69,18 @@ function onRecorderStart() {
     }));
   }, 50)
 }
-
+var s =0;
 //stop record and generate  webm, mp4, gif
 function onRecorderStop(e) {
   endTime = new Date()
   recordGif = false
   var blobWebm = new Blob(chunks);
-
+  hint.textContent = "downloading···  \r\n";
+  hint.textContent += "(.gif, .mp4)";
+  hint.style.display = "block";
   //download webm
-  console.log(`rendering...video/webm`)
-  download(blobWebm, `${name}.webm`, "video/webm")  
+  // console.log(`rendering...video/webm`)
+  // download(blobWebm, `${name}.webm`, "video/webm")  
 
   //download after codec mp4
   console.log(`rendering...video/mp4`)
@@ -112,6 +116,20 @@ async function toMp4(blobData) {
   const {
     data
   } = await worker.read('output.mp4');
+
+  var delay = function(s){
+    return new Promise(function(resolve,reject){
+     setTimeout(resolve,s); 
+    });
+  };
+  delay().then(function(){
+    hint.textContent = "Completed!";    
+    return delay(1500); 
+  }).then(function(){
+    hint.style.display = "none";   
+    return delay(1); 
+  });
+  
   return data
 }
 

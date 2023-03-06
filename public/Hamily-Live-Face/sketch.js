@@ -670,7 +670,7 @@ let facialFeatures = new FacialFeatures({
 });
 let btnPosBase, saveBtnPos, recordBtnPos
 
-let ShowCloseBtn, RandomBtn, SeaBtn, LiveBtn, AlphaBtn, saveBtn, recordBtn, btnText, bgRect, spaceLine1, spaceLine2
+let ShowCloseBtn, RandomBtn, SeaBtn, LiveBtn, AlphaBtn, saveBtn, recordBtn, downloadText, btnText, bgRect, spaceLine1, spaceLine2
 let mobileTextSpace, pcTextSpace
 let line1
 let allBtnContainer, btnContainer0, btnContainer1, btnContainer2, btnContainer3, btnContainer4
@@ -820,6 +820,10 @@ function setup() {
     recordBtn.style.height = WIDTH/12;
     recordBtn.style.display = "block";
     recordBtn.style.left = document.documentElement.clientWidth/2 + WIDTH/2 - WIDTH/5;  
+
+    downloadText = document.getElementById("download_hint");
+    downloadText.style.top = WIDTH/12;
+    downloadText.style.left = document.documentElement.clientWidth/2 + WIDTH/2 - WIDTH/5;  
 
     hashInput = createInput().attribute('placeholder', 'Your HAM number (0-749)');
     hashInput.style('font-size', HEIGHT*0.02);
@@ -1169,7 +1173,6 @@ function draw() {
                     leftEyeTemp = (leftEyeBottom.y - leftEye.y) / (rightEyeBottom.x-leftEyeBottom.x)
                     leftEyeTemp = (leftEyeTemp<0.145)? 0.1 : 1;  
                     facialFeatures.leftEyeMultiply = lerp(facialFeatures.leftEyeMultiply, leftEyeTemp, 0.6);
-                    print(leftEyeBottom.y - leftEye.y)
                     // rightEyeTemp = (nose.y - rightEye.y)/(nose.y - rightEyeBottom.y);
                     // rightEyeTemp = (((rightEyeBottom.y - rightEye.y) / boxWidth)<0.046)?0.1:1
                     // rightEyeTemp = (rightEyeTemp<1.18)? 0.1 : 1;
