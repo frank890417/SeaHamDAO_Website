@@ -11,6 +11,53 @@
 
           .row 
       a.col-sm-5(
+        href="https://app.manifold.xyz/c/HamilyLimitedEditions3",
+        target="_blank"
+      )
+        img.w-100( 
+          src="/img/meme3.jpeg"
+        )
+      a.col-sm-7(
+        href="https://app.manifold.xyz/c/HamilyLimitedEditions3",
+        target="_blank"
+      )
+        .news-info
+          h3.date.news-date 2023/3/9
+          h2.news-title 
+            span.line Hamily Drops #3
+            br
+            //- span.line ENDS AT 5.69ETH
+            //- span.line @sunday_
+            span.line HAM JUMP' by @BasqKek
+
+          //- .countdown
+          //-   .number {{ displayTime }}
+            //- .bid Current Bid 5ETH
+          .link-readmore
+            span
+              SvgInline(
+                src="/more_arrow.svg",
+                style="width: 200px; display: inline-block"
+              )
+            span.ml-3.text-read-more Go To Claim
+
+
+        .col-12.mt-5
+          //- p SEIZE THE SEAHAMS
+          //-   br
+          p Now available as a Limited Edition claim, for the next 72h
+            br
+            | Mints only for whitelisted Hamily Asset holders who participated in this drop.
+            br
+            | Pochi & Hambody WL raffle winners in the next tweet!
+
+
+
+      .hr
+
+
+    .row 
+      a.col-sm-5(
         href="https://app.manifold.xyz/c/HamilyLimitedEditions2",
         target="_blank"
       )
