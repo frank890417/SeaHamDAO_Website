@@ -28,7 +28,8 @@
             br
             //- span.line ENDS AT 5.69ETH
             //- span.line @sunday_
-            span.line HAM JUMP' by @BasqKek
+            span.line HAM JUMP' by 
+              a(href="https://twitter.com/BasqKek" target="_blank") @BasqKek
 
           //- .countdown
           //-   .number {{ displayTime }}
@@ -71,11 +72,12 @@
         .news-info
           h3.date.news-date 2023/2/23
           h2.news-title 
-            span.line Hamily Drops
+            span.line Hamily Drops #2
             br
             //- span.line ENDS AT 5.69ETH
             //- span.line @sunday_
-            span.line The second Hamily Limited Editions Drop!
+            span.line SEIZE THE SEAHAMS by 
+              a(href="https://twitter.com/SkifeHam" target="_blank") @Skife
 
           //- .countdown
           //-   .number {{ displayTime }}
@@ -117,13 +119,14 @@
       )
         .news-info
           h3.date.news-date 2023/2/9
+
           h2.news-title 
-            span.line Hamily Drops
+            span.line Hamily Drops #1
             br
             //- span.line ENDS AT 5.69ETH
             //- span.line @sunday_
-            span.line The first Hamily Limited Editions Drop!
-
+            span.line HAM FORTUNA IUVAT by 
+              a(href="https://twitter.com/GuidoDisalle" target="_blank") @Guido 
           //- .countdown
           //-   .number {{ displayTime }}
             //- .bid Current Bid 5ETH
