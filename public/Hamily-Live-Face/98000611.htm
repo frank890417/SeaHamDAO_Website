@@ -46,26 +46,50 @@ canvas {
   left: 0;
   right: 0;
 }
-#save_canvas {
+#record {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.record_btn {
+  width: 100%;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   overflow: hidden;
   outline: none;
   display: none;
-  position: absolute;
-  z-index: 100;
-  top:0;
+  z-index: 1000;
   opacity: 0.85;
   padding: 0;
 }
-#save_canvas:hover{
+.record_btn:hover{
   opacity: 1;
 }
-#record_img{
+.record_btn_img{
   width: 100%;
 }
 #download_hint{
+  display: none;
+  font-size: 1.5vmin;
+  text-align: center;
+  color: #ffffff;
+  font-family: Roboto;
+  z-index: 100;
+}
+#download_type{
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  color: #000000;
+  font-family: Roboto;
+  z-index: 100;
+  background: #ffffff80;
+  border-radius: 13em;
+}
+download_type{
   display: none;
   position: absolute;
   font-size: 20%;
@@ -73,10 +97,29 @@ canvas {
   font-family: Roboto;
   z-index: 100;
 }
+#download_type_text{
+  font-size: 18px;
+  color: #000000;
+  font-family: Roboto;
+  z-index: 100;
+}
 </style></head>
 <body>
-    <button id="save_canvas"><img src="img/Record.png" id="record_img"></button>
+  <div id="record">
+    <button id="save_canvas" class="record_btn"><img src="img/Record_Select.png" class="record_btn_img" id="record_state"></button>
+    <button id="format_UI" class="record_btn"><img src="img/Record.png" class="record_btn_img"></button>
     <div id="download_hint">downloading···</div>
-    <script src="sketch.js"></script>
-    <script src="recordCanvas.js"></script>
+  </div>
+  <div id="download_type">
+      <div id="download_webm" class="download_type">
+        <div id="download_type_text WebM">WebM</div>
+        <div id="download_webm_hint">done immediaely</div>
+      </div>
+      <div id="download_mp4" class="download_type">
+        <div id="download_type_text MP4">MP4</div>
+        <div id="download_mp4_hint">render takes 1 mins</div>
+      </div>
+    </div>
+  <script src="sketch.js"></script>
+  <script src="recordCanvas.js"></script>
 </body></html>

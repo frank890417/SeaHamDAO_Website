@@ -20,79 +20,171 @@ var recordGif = false
 var name = 'Sail-o-bots'
 var initialTime = new Date()
 var endTime
-var targetFps = 60
+var targetFps = 30
 
 function record() {
+  hint.textContent = "Recording···";
+  hint.style.display = "block";
+
   logs = []
-  gif = createGif()
-  recordGif = true
-  chunks = [];
+  // gif = createGif()
+  // recordGif = true
   frames = [];
-  chunks.length = 0;
-  let canvas = document.querySelector("canvas")
-  let stream = canvas.captureStream(targetFps);
-  let recorder = new MediaRecorder(stream);
-  recorder.ondataavailable = e => {
-    if (e.data.size) {
-      chunks.push(e.data);
-    }
-  };
+  let sourceCanvas = document.querySelector("canvas")
+  if(isWebM){
+    chunks_highR = [];
+    chunks_highR.length = 0;
+    let stream_highR = sourceCanvas.captureStream(targetFps);
+    let recorder_highR = new MediaRecorder(stream_highR);
 
-  //create files
-  recorder.onstop = onRecorderStop;
+    recorder_highR.ondataavailable = e => {
+      if (e.data.size) {
+        chunks_highR.push(e.data);
+      }
+    };
 
-  btn.onclick = e => {
-    recorder.stop();
-    document.getElementById("record_img").src="img/Record.png"
-    btn.onclick = record;
-  };
+    recorder_highR.onstop = onRecorderHighRStop;
 
-  //start recording frames for gif
-  recorder.onstart = onRecorderStart  
+    btn.onclick = e => {
+      recorder_highR.stop();
+      document.getElementById("record_state").src="img/Record_Select.png"
+      recordType.style.display = "none"
+      document.getElementById('download_mp4').style.display = "none"
+      document.getElementById('download_webm').style.display = "none"
+      recordBtn.style.display = "none"
+      recordFormatBtn.style.display = "block"
+  
+      btn.onclick = record;
+    };
+    recorder_highR.start();
+  }
 
-  //start recording
-  recorder.start();
+  if(isMP4){
+    chunks = [];
+    chunks.length = 0;
+    let canvas = document.createElement('canvas');
+
+    canvas.width = 1000;
+    canvas.height = 1000;
+    var ctx = canvas.getContext("2d");
+    var i = window.setInterval(function() {ctx.drawImage(sourceCanvas,0, 0, canvas.width, canvas.height)},20);
+  
+    let stream = canvas.captureStream(targetFps);
+    
+    let recorder = new MediaRecorder(stream);
+  
+    recorder.ondataavailable = e => {
+      if (e.data.size) {
+        chunks.push(e.data);
+      }
+    };
+  
+    //create files
+    recorder.onstop = onRecorderStop;
+  
+    btn.onclick = e => {
+      recorder.stop();
+      document.getElementById("record_state").src="img/Record_Select.png"
+  
+      recordType.style.display = "none"
+      document.getElementById('download_mp4').style.display = "none"
+      document.getElementById('download_webm').style.display = "none"
+      recordBtn.style.display = "none"
+      recordFormatBtn.style.display = "block"
+  
+      btn.onclick = record;
+    };
+  
+    //start recording frames for gif
+    // recorder.onstart = onRecorderStart  
+  
+    //start recording
+    recorder.start();
+
+  }
 
   //change button img
-  document.getElementById("record_img").src="img/Recording.png"
+  document.getElementById("record_state").src="img/Recording.png"
 }
 
 //add a frame every 50ms
-function onRecorderStart() {
-  initialTime = new Date()
-  let interval = setInterval(() => {
-    if (!recordGif)
-      clearInterval(interval)
-    window.requestAnimationFrame(() => gif.addFrame(canvas, {
-      copy: true,
-      delay: 50
-    }));
-  }, 50)
-}
+// function onRecorderStart() {
+//   initialTime = new Date()
+//   let interval = setInterval(() => {
+//     if (!recordGif)
+//       clearInterval(interval)
+//     window.requestAnimationFrame(() => gif.addFrame(canvas, {
+//       copy: true,
+//       delay: 50
+//     }));
+//   }, 50)
+// }
 var s =0;
-//stop record and generate  webm, mp4, gif
+//stop record and generate  webm, mp4, gif------
+// function onRecorderStop(e) {
+//   endTime = new Date()
+//   recordGif = false
+//   var blobWebm_highR = new Blob(chunks_highR);
+//   var blobWebm = new Blob(chunks);
+//   hint.textContent = "downloading···  \r\n";
+//   hint.textContent += "(.gif, .mp4)";
+//   hint.style.display = "block";
+//   //download webm
+//   console.log(`rendering...video/webm`)
+//   download(blobWebm_highR, `${name}.webm`, "video/webm")  
+
+//   //download after codec mp4
+//   console.log(`rendering...video/mp4`)
+//   var blobMp4 = toMp4(blobWebm).then(e => {  
+//   download(e, `${name}.mp4`, "video/mp4")
+//   }).catch(e => console.log(e))
+
+//   console.log(`rendering...gif`)
+//   //download after render
+//   // gif.render()
+// }
+//-----------
+
+function onRecorderHighRStop(e) {
+  recordGif = false
+  var blobWebm_highR = new Blob(chunks_highR);
+  
+  hint.textContent = "downloading WebM video···\r\n";
+  hint.style.display = "block";
+
+  //download webm
+  console.log(`rendering...video/webm`)
+  download(blobWebm_highR, `${name}.webm`, "video/webm")  
+
+  var delay = function(s){
+    return new Promise(function(resolve,reject){
+     setTimeout(resolve,s); 
+    });
+  };
+  delay().then(function(){
+    hint.textContent = "Completed!";    
+    return delay(1500); 
+  }).then(function(){
+    hint.style.display = "none";   
+    return delay(1); 
+  });
+}
+
 function onRecorderStop(e) {
   endTime = new Date()
-  recordGif = false
   var blobWebm = new Blob(chunks);
-  hint.textContent = "downloading···  \r\n";
-  hint.textContent += "(.gif, .mp4)";
+  hint.textContent = "downloading MP4 video···\r\n";
+  hint.textContent += "it takes 1-2 minutes\r\n";
+  hint.textContent += "(depending on the length)";
+  hint.style.lineHeight = "1.5";
   hint.style.display = "block";
-  //download webm
-  // console.log(`rendering...video/webm`)
-  // download(blobWebm, `${name}.webm`, "video/webm")  
-
   //download after codec mp4
   console.log(`rendering...video/mp4`)
   var blobMp4 = toMp4(blobWebm).then(e => {  
   download(e, `${name}.mp4`, "video/mp4")
   }).catch(e => console.log(e))
 
-  console.log(`rendering...gif`)
-  //download after render
-  gif.render()
 }
-
 btn.onclick = record;
 
 async function toMp4(blobData) {

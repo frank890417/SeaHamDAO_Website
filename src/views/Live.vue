@@ -20,6 +20,7 @@
         br
         br
         p 2023/03/06 v1.0 Live HAM release! Try on, record, and share how you HAM
+        p 2023/03/12 v1.1 Video recording function is online.
       .col-md-1
 
 </template>
