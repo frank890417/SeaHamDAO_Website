@@ -43,6 +43,10 @@ export default {
           label: "Artist"
         },
         {
+          url: "/live",
+          label: "LiveHam"
+        },
+        {
           url: "/news",
           label: "News"
         },
