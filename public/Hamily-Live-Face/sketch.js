@@ -1182,9 +1182,8 @@ function draw() {
     // scale(-0.4,0.4)
     // image(video,-WIDTH,0);
     scale(-0.2,0.15);    
-    translate(-WIDTH,0);
+    translate(-WIDTH+100,0);
     if(showCapture)
-        translate(100,0)
         image(video, 0 , 0, -WIDTH, HEIGHT);
         // image(video, 0, 0, -video.width,video.height);
         push()
