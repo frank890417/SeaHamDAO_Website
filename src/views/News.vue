@@ -9,7 +9,7 @@
           span News
           br
           .strokeText HAMILY UPDATE
-
+    // news template 
     .row(v-for="newsItem in newsItems")
       a.col-sm-5(:href="newsItem.link", target="_blank")
         img.w-100(:src="newsItem.imgSrc")
@@ -40,6 +40,8 @@
 
       .hr
 
+
+    // old news
     .row 
       |
       a.col-sm-5(
