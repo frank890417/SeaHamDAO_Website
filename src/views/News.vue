@@ -2,151 +2,46 @@
 .page.news
   .container
     .row 
+      |
       .col-12
         h1.animated.fadeInUp 
+          |
           span News
           br
           .strokeText HAMILY UPDATE
 
-
-          .row 
-      a.col-sm-5(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions3",
-        target="_blank"
-      )
-        img.w-100( 
-          src="/img/meme3.jpeg"
-        )
-      a.col-sm-7(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions3",
-        target="_blank"
-      )
+    .row(v-for="newsItem in newsItems")
+      a.col-sm-5(:href="newsItem.link", target="_blank")
+        img.w-100(:src="newsItem.imgSrc")
+      a.col-sm-7(:href="newsItem.link", target="_blank")
         .news-info
-          h3.date.news-date 2023/3/9
-          h2.news-title 
-            span.line Hamily Drops #3
+          h3.date.news-date {{ newsItem.date }}
+          h2.news-title
+            span.line {{ newsItem.title }}
             br
-            //- span.line ENDS AT 5.69ETH
-            //- span.line @sunday_
-            span.line HAM JUMP' by 
-              a(href="https://twitter.com/BasqKek" target="_blank") @BasqKek
+            span.line {{ newsItem.workTitle }} by
+              a(:href="newsItem.authorLink", target="_blank") {{ newsItem.authorName }}
 
-          //- .countdown
-          //-   .number {{ displayTime }}
-            //- .bid Current Bid 5ETH
+          .countdown
+            .number {{ newsItem.displayTime }}
           .link-readmore
             span
               SvgInline(
                 src="/more_arrow.svg",
                 style="width: 200px; display: inline-block"
               )
-            span.ml-3.text-read-more Go To Claim
-
+            span.ml-3.text-read-more {{ newsItem.readMore }}
 
         .col-12.mt-5
-          //- p SEIZE THE SEAHAMS
+          p {{ newsItem.description }}
+          //- span(v-for="bullet in newsItem.bullets")
           //-   br
-          p Now available as a Limited Edition claim, for the next 72h
-            br
-            | Mints only for whitelisted Hamily Asset holders who participated in this drop.
-            br
-            | Pochi & Hambody WL raffle winners in the next tweet!
-
-
-
-      .hr
-
-
-    .row 
-      a.col-sm-5(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions2",
-        target="_blank"
-      )
-        img.w-100( 
-          src="/img/meme2.jpeg"
-        )
-      a.col-sm-7(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions2",
-        target="_blank"
-      )
-        .news-info
-          h3.date.news-date 2023/2/23
-          h2.news-title 
-            span.line Hamily Drops #2
-            br
-            //- span.line ENDS AT 5.69ETH
-            //- span.line @sunday_
-            span.line SEIZE THE SEAHAMS by 
-              a(href="https://twitter.com/SkifeHam" target="_blank") @Skife
-
-          //- .countdown
-          //-   .number {{ displayTime }}
-            //- .bid Current Bid 5ETH
-          .link-readmore
-            span
-              SvgInline(
-                src="/more_arrow.svg",
-                style="width: 200px; display: inline-block"
-              )
-            span.ml-3.text-read-more Go To Claim
-
-
-        .col-12.mt-5
-          //- p SEIZE THE SEAHAMS
-          //-   br
-          p Hamily Limited 750 Editions Claims:
-            br
-            | SEIZE THE SEAHAMS
-            br
-            | by Skife
-
-
-
-      .hr
-
-
-    .row 
-      a.col-sm-5(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions",
-        target="_blank"
-      )
-        img.w-100( 
-          src="/img/hamilydrop-guido.jpeg"
-        )
-      a.col-sm-7(
-        href="https://app.manifold.xyz/c/HamilyLimitedEditions",
-        target="_blank"
-      )
-        .news-info
-          h3.date.news-date 2023/2/9
-
-          h2.news-title 
-            span.line Hamily Drops #1
-            br
-            //- span.line ENDS AT 5.69ETH
-            //- span.line @sunday_
-            span.line HAM FORTUNA IUVAT by 
-              a(href="https://twitter.com/GuidoDisalle" target="_blank") @Guido 
-          //- .countdown
-          //-   .number {{ displayTime }}
-            //- .bid Current Bid 5ETH
-          .link-readmore
-            span
-              SvgInline(
-                src="/more_arrow.svg",
-                style="width: 200px; display: inline-block"
-              )
-            span.ml-3.text-read-more Go To Claim
-
-
-        .col-12.mt-5
-          p The claims page for whitelisted Hamily Asset holders will go live at 11AM EST, and verified addresses must claim their mints within 24 hours.
-            br
-          p Any unclaimed assets will be burned. Stay tuned for the Claims Page post!
+          //-   | {{ bullet }}
 
       .hr
 
     .row 
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
         target="_blank"
@@ -164,6 +59,7 @@
         .news-info
           h3.date.news-date 2021/12/21
           h2.news-title 
+            |
             span.line THE ATOM OF HAM - #S
             br
             //- span.line ENDS AT 5.69ETH
@@ -196,6 +92,7 @@
       .hr
 
     .row 
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
         target="_blank"
@@ -213,6 +110,7 @@
         .news-info
           h3.date.news-date 2021/12/11
           h2.news-title 
+            |
             span.line THE ATOM OF HAM - #AM
             br
             span.line ENDS AT 5.69ETH
@@ -235,6 +133,7 @@
         p The holder of the premium ham will gain access to the Hamily DAO and proceeds from the auction will go into the Hamily treasury, with the goal of better supporting and growing the loyal community.
       .hr
     .row 
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/110346",
         target="_blank"
@@ -252,6 +151,7 @@
         .news-info
           h3.date.news-date 2021/11/21
           h2.news-title 
+            |
             span.line THE ATOM OF HAM
             br
             span.line ENDS AT 10.69ETH
@@ -274,12 +174,14 @@
         p The holder of the premium ham will gain access to the Hamily DAO and proceeds from the auction will go into the Hamily treasury, with the goal of better supporting and growing the loyal community.
       .hr
     .row 
+      |
       .col-sm-5
         img.w-100(src="/the_hamily_news_cover.jpeg")
       .col-sm-7
         .news-info
           h3.date.news-date 2021/11/22
           h2.news-title 
+            |
             span.line THE HAMILY
             br
             span.line WEBSITE REVEAL
@@ -296,7 +198,61 @@ import * as dayjs from "dayjs";
 export default {
   data() {
     return {
-      currentTime: null
+      newsItems: [
+        {
+          link: "https://app.manifold.xyz/c/HamilyLimitedEditions4",
+          imgSrc: "/img/meme4.jpeg",
+          date: "2023/3/23",
+          title: "Hamily Drops #4",
+          workTitle: "THE SECRET MEETING",
+          authorLink: "https://twitter.com/4LeafCloverNFT",
+          authorName: "@4LeafCloverNFT",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "Now available as a Limited Edition claim, Hamily Limited Editions Claims: \nThe Secret Meeting",
+        },
+        {
+          link: "https://app.manifold.xyz/c/HamilyLimitedEditions3",
+          imgSrc: "/img/meme3.jpeg",
+          date: "2023/3/9",
+          title: "Hamily Drops #3",
+          workTitle: "HAM JUMP",
+          authorLink: "https://twitter.com/BasqKek",
+          authorName: "@BasqKek",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "Now available as a Limited Edition claim, for the next 72h\nMints only for whitelisted Hamily Asset holders who participated in this drop.\nPochi & Hambody WL raffle winners in the next tweet!",
+        },
+        {
+          link: "https://app.manifold.xyz/c/HamilyLimitedEditions2",
+          imgSrc: "/img/meme2.jpeg",
+          date: "2023/2/23",
+          title: "Hamily Drops #2",
+          workTitle: "SEIZE THE SEAHAMS",
+          authorLink: "https://twitter.com/SkifeHam",
+          authorName: "@Skife",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "Hamily Limited 750 Editions Claims:\nSEIZE THE SEAHAMS\nby Skife",
+        },
+        {
+          link: "https://app.manifold.xyz/c/HamilyLimitedEditions",
+          imgSrc: "/img/hamilydrop-guido.jpeg",
+          date: "2023/2/9",
+          title: "Hamily Drops #1",
+          workTitle: "HAM FORTUNA IUVAT",
+          authorLink: "https://twitter.com/GuidoDisalle",
+          authorName: "@Guido",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "The claims page for whitelisted Hamily Asset holders will go live at 11AM EST, and verified addresses must claim their mints within 24 hours.\nAny unclaimed assets will be burned. Stay tuned for the Claims Page post!",
+        },
+      ],
+      currentTime: null,
     };
   },
   mounted() {
@@ -312,8 +268,8 @@ export default {
       let diff = date1.diff(date2);
       if (diff < 0) diff = 0;
       return dayjs(diff).format("HH:mm:ss");
-    }
-  }
+    },
+  },
 };
 </script>
 
