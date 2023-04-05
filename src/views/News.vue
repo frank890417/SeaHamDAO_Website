@@ -3,8 +3,10 @@
   .container
     .row 
       |
+      |
       .col-12
         h1.animated.fadeInUp 
+          |
           |
           span News
           br
@@ -40,9 +42,9 @@
 
       .hr
 
-
     // old news
     .row 
+      |
       |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
@@ -61,6 +63,7 @@
         .news-info
           h3.date.news-date 2021/12/21
           h2.news-title 
+            |
             |
             span.line THE ATOM OF HAM - #S
             br
@@ -95,6 +98,7 @@
 
     .row 
       |
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
         target="_blank"
@@ -112,6 +116,7 @@
         .news-info
           h3.date.news-date 2021/12/11
           h2.news-title 
+            |
             |
             span.line THE ATOM OF HAM - #AM
             br
@@ -136,6 +141,7 @@
       .hr
     .row 
       |
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/110346",
         target="_blank"
@@ -153,6 +159,7 @@
         .news-info
           h3.date.news-date 2021/11/21
           h2.news-title 
+            |
             |
             span.line THE ATOM OF HAM
             br
@@ -177,12 +184,14 @@
       .hr
     .row 
       |
+      |
       .col-sm-5
         img.w-100(src="/the_hamily_news_cover.jpeg")
       .col-sm-7
         .news-info
           h3.date.news-date 2021/11/22
           h2.news-title 
+            |
             |
             span.line THE HAMILY
             br
@@ -201,6 +210,19 @@ export default {
   data() {
     return {
       newsItems: [
+        {
+          link: "https://app.manifold.xyz/c/HamilyLimitedEditions5",
+          imgSrc: "/img/meme5.gif",
+          date: "2023/4/06",
+          title: "Hamily Drops #5",
+          workTitle: "WOLLY HAMMOTH",
+          authorLink: "https://twitter.com/WhalesinkXXX",
+          authorName: "@WhalesinkXXX",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "Now available as a Limited Edition claim, Hamily Limited Editions Claims: \nWolly Mammoth",
+        },
         {
           link: "https://app.manifold.xyz/c/HamilyLimitedEditions4",
           imgSrc: "/img/meme4.jpeg",
