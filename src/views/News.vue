@@ -4,8 +4,14 @@
     .row 
       |
       |
+      |
+      |
+      |
       .col-12
         h1.animated.fadeInUp 
+          |
+          |
+          |
           |
           |
           span News
@@ -46,6 +52,9 @@
     .row 
       |
       |
+      |
+      |
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
         target="_blank"
@@ -63,6 +72,9 @@
         .news-info
           h3.date.news-date 2021/12/21
           h2.news-title 
+            |
+            |
+            |
             |
             |
             span.line THE ATOM OF HAM - #S
@@ -99,6 +111,9 @@
     .row 
       |
       |
+      |
+      |
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/116676",
         target="_blank"
@@ -116,6 +131,9 @@
         .news-info
           h3.date.news-date 2021/12/11
           h2.news-title 
+            |
+            |
+            |
             |
             |
             span.line THE ATOM OF HAM - #AM
@@ -142,6 +160,9 @@
     .row 
       |
       |
+      |
+      |
+      |
       a.col-sm-5(
         href="https://foundation.app/@thehamily/~/110346",
         target="_blank"
@@ -159,6 +180,9 @@
         .news-info
           h3.date.news-date 2021/11/21
           h2.news-title 
+            |
+            |
+            |
             |
             |
             span.line THE ATOM OF HAM
@@ -185,12 +209,18 @@
     .row 
       |
       |
+      |
+      |
+      |
       .col-sm-5
         img.w-100(src="/the_hamily_news_cover.jpeg")
       .col-sm-7
         .news-info
           h3.date.news-date 2021/11/22
           h2.news-title 
+            |
+            |
+            |
             |
             |
             span.line THE HAMILY
@@ -210,6 +240,19 @@ export default {
   data() {
     return {
       newsItems: [
+        {
+          link: "https://app.manifold.xyz/c/pepechi",
+          imgSrc: "/img/Pepechi0724.gif",
+          date: "2023/7/31",
+          title: "PEPECHI",
+          workTitle: "Special Version of meme",
+          authorLink: "https://twitter.com/cheyuwu345",
+          authorName: "@TheHamsLab",
+          displayTime: "",
+          readMore: "Go To Claim",
+          description:
+            "Hey, they are Pepechis. There are Pochi and Pepe memes. Pepechis are the ultimate meme lords, a special version of Pochi, which are mysterious creatures that capture different emotions in your daily life. Their faces speak for themselves, conveying the most relatable and hilarious expressions. They simply lie on the ground and play all day, coming up with the dankest memes you can imagine. These meme virtuosos are dedicated to supporting the Hamiy movement and spreading positivity and joy to all its supporters! 🐸😂🔥",
+        },
         {
           link: "https://app.manifold.xyz/c/HamilyLimitedEditions5",
           imgSrc: "/img/meme5.gif",
