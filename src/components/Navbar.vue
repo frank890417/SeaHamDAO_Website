@@ -1,27 +1,35 @@
 <template lang="pug">
-div.nav-container 
-  nav.px-5(:class="{open:navOpen}", @click="navOpen=false")
+.nav-container 
+  |
+  nav.px-5(:class="{ open: navOpen }", @click="navOpen = false")
     ul
       li(v-for="item in items")
-        router-link(:to="item.url") {{item.label}}
+        router-link(:to="item.url") {{ item.label }}
+      li
+        a(target="_blank", href="https://the-hamily.myshopify.com/") Store
       li.display-flex
-
-        a.link-social.gold(href="https://www.curate.page/t/HamilyLimitedEditions" target="_blank").mr-4
+        a.link-social.gold.mr-4(
+          href="https://www.curate.page/t/HamilyLimitedEditions",
+          target="_blank"
+        )
           | Drop Claim!
-      
-        a.link-social(href="https://foundation.app/@thehamily" target="_blank").mr-4
-          img(src="/img/foundation_logo.png" height="20")
 
-        a.link-social(href="https://twitter.com/sailobots" target="_blank").mr-4
+        a.link-social.mr-4(
+          href="https://foundation.app/@thehamily",
+          target="_blank"
+        )
+          img(src="/img/foundation_logo.png", height="20")
+
+        a.link-social.mr-4(href="https://twitter.com/sailobots", target="_blank")
           i.fab.fa-twitter
-        a.link-social(href="https://discord.gg/nTtCmkQEJa" target="_blank").mr-4
+        a.link-social.mr-4(href="https://discord.gg/nTtCmkQEJa", target="_blank")
           i.fab.fa-discord
-        a.link-social(href="mailto:hello@hamily.life" target="_blank")
+        a.link-social(href="mailto:hello@hamily.life", target="_blank")
           i.fas.fa-envelope
     img.bg-strokeham(src="/about_strokeham.svg")
   router-link(to="/")
     img.logo(src="/img/hamLogo.svg")
-  .d-md-none.toggle(@click="navOpen=!navOpen")
+  .d-md-none.toggle(@click="navOpen = !navOpen")
     .icon(v-if="navOpen")
       i.fas.fa-times
     .icon(v-if="!navOpen")
@@ -36,39 +44,40 @@ export default {
       items: [
         {
           url: "/about",
-          label: "About"
+          label: "About",
         },
         {
           url: "/artist",
-          label: "Artist"
+          label: "Artist",
         },
         {
           url: "/live",
-          label: "LiveHam"
+          label: "LiveHam",
         },
         {
           url: "/news",
-          label: "News"
+          label: "News",
         },
         {
           url: "/memes",
-          label: "Memes"
+          label: "Memes",
         },
         {
           url: "/hamiverse",
-          label: "Hamiverse"
+          label: "Hamiverse",
         },
         {
           url: "/crafthams",
-          label: "Crafthams"
-        }
+          label: "Crafthams",
+        },
+
         // {
         //   url: "/contact",
         //   label: "Contact"
         // }
-      ]
+      ],
     };
-  }
+  },
 };
 </script>
 
